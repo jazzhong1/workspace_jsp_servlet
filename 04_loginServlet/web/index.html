@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>메인화면</title>
+<style>
+	body{
+		background-color:black;
+		color:white;
+	}
+	li a{
+		text-decoration:none;
+		color:white;
+	}
+	li {
+		font-size:19px;
+		margin-right:20px;
+		display:inline-block;
+	}
+	td{
+		text-align:center;
+	}
+	td:first-child{
+		text-align:right;
+	}
+	#login{
+		display:inline-block;
+		float:right;
+	}
+	#head{
+		margin-top:-20px;
+		display:inline-block;
+	}
+</style>
+</head>
+<body>
+	<div align='center'>
+		<div>
+			<h1>BS홈페이지에 오신것을 환영합니다.!</h1>
+		</div>
+		<div id='login'>
+			<form action='logincheck' method='post'>
+				<table>
+					<tr>
+						<td><label for='id'>id</label></td>
+						<td><input type='text' name='id' id='id' placeholder='아이디입력'>
+					</tr>
+					<tr>
+						<td><label for='pw'>password</label></td>
+						<td><input type='password' name='pw' id='pw' placeholder='비밀번호입력'></td>
+					</tr>
+					<tr>
+						<td><input type='submit' value='로그인'></td>
+						<td><input type='reset' value='취소'></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+	<hr>
+	<hr>
+	<header>
+		<ul>
+			<li><a href='#'>공지사항</a></li>
+			<li><a href='#'>게시판</a></li>
+			<li><a href='#'>자료실</a></li>	
+		</ul>
+	</header>
+	<hr>	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

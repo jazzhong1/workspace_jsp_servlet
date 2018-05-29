@@ -1,0 +1,32 @@
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="notice.model.vo.Notice"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+	
+	
+<%
+	Notice n = (Notice) request.getAttribute("notice");
+
+	String loc = request.getContextPath() + "/noticeList";
+	//목록으로 보내기위해
+%>
+	
+
+<%@ include file="/views/common/header.jsp"%>
+<div id="notice-container">
+	<table id="tbl-notice">
+		<tr>
+			<th>제목</th>
+			<td><%=n.getNotice_title() %></td>
+		</tr>
+		<tr>
+			<th>작성자</th>
+			<td><%=n.getNotice_writer() %></td>
+		</tr>
+	</table>
+</div>
+
+<%@ include file="/views/common/footer.jsp"%>
+

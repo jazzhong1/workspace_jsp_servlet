@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>취향에 따른 여행지추천</title>
+</head>
+<body>
+	<form action="/03_servletTest/recommend.do" method="get">
+	<h1>색갈에 따른 여행지 추천사이트</h1>
+	<ul style="list-style: none; line-height: 200%">
+		<li>이름은 ? <input type='text' name='name' size="10">
+		</li>
+		<li>좋아하는 색은? 
+			파랑 <input type="radio" name="color" value="파랑">
+			빨강 <input type="radio" name="color" value="빨강"> 
+			노랑 <input type="radio" name="color" value="노랑"> 
+			초록 <input type="radio" name="color" value="초록">
+		</li>		
+			<li><input type="submit" value="확인">
+				<input type="reset" value="취소">
+			</li>
+	</ul>
+	</form>
+</body>
+</html>

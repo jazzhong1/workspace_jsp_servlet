@@ -1,0 +1,3 @@
+0:0:0:0:0:0:0:1 - - [30/May/2018:00:00:10 +0900] "GET /07_home/noticeView?no=30 HTTP/1.1" 200 2972
+0:0:0:0:0:0:0:1 - - [30/May/2018:00:00:10 +0900] "GET /mvc/images/Java-Servlets-JSP.png HTTP/1.1" 404 1058
+0:0:0:0:0:0:0:1 - - [30/May/2018:00:00:12 +0900] "GET /07_home/noticeFileDownload?filePath= HTTP/1.1" 404 1046

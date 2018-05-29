@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>03_servletTest</display-name>
+	<!-- 서블릿 맵 핑하기!! -->
+	<servlet>
+		<servlet-name>testPerson</servlet-name>
+		<servlet-class>kh.test.TestPerson1</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>testPerson</servlet-name>
+		<url-pattern>/testPerson1.do</url-pattern>
+	</servlet-mapping>
+	<!-- 매핑끝!! -->
+	<servlet>
+		<servlet-name>testPerson2</servlet-name>
+		<servlet-class>kh.test.TestPerson2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>testPerson2</servlet-name>
+		<url-pattern>/testPerson2.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>recommend</servlet-name>
+		<servlet-class>kh.test.Recommend</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>recommend</servlet-name>
+		<url-pattern>/recommend.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>login</servlet-name>
+		<servlet-class>kh.test.LoginCheck</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/logincheck.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>check</servlet-name>
+		<servlet-class>kh.test.LoginSuccess</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>check</servlet-name>	<!-- 변수로보기엔 애매. 연결매개체 -->
+		<url-pattern>/success.do</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
