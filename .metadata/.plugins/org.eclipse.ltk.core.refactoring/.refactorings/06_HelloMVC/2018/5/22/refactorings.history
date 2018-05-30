@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;06_HelloMVC/src/sql/board/notice-query.properties&apos; to &apos;board-query.properties&apos;" description="Rename resource &apos;notice-query.properties&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/sql/board/notice-query.properties" name="board-query.properties" stamp="1527650640085" updateReferences="true"/>
+</session>

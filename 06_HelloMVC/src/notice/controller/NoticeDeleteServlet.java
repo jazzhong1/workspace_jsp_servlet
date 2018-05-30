@@ -1,5 +1,6 @@
 package notice.controller;
 
+import java.io.File;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,9 +25,19 @@ public class NoticeDeleteServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int notice_no=Integer.parseInt(request.getParameter("no"));
 		
+		String saveDir=getServletContext().getRealPath("/uploadFiles"+File.separator+"notice");
+		String filename=(String)request.getParameter("filePath");
+		System.out.println(filename);
+		boolean flag=false;
+		if(filename!=null && filename.length()>0) {
+		File deleteFile=new File(saveDir+"/"+filename);
+		flag=deleteFile.delete();
+		System.out.println(flag);
+		}
+		
 		int result=new NoticeService().deleteNotice(notice_no);
 		String view="/views/common/msg.jsp";
-		if(result>0){
+		if(result>0&&flag){
 			request.setAttribute("msg", "삭제완료");
 			request.setAttribute("loc", "/noticeList");
 		}

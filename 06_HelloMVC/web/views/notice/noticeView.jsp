@@ -46,7 +46,7 @@
 					}
 					function fn_deleteNotice()
 					{
-						location.href="<%=request.getContextPath()%>/noticeDelete?no=<%=n.getNotice_no()%>";
+						location.href="<%=request.getContextPath()%>/noticeDelete?no=<%=n.getNotice_no()%>&filePath=<%=n.getFilePath()%>";
 				}
 			</script>
 		</tr>

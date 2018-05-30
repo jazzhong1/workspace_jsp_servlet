@@ -56,8 +56,8 @@ public class NoticeIfleDownloadServlet extends HttpServlet {
 		}
 		else
 		{
-			resFile=new String(filename.getBytes("UTF-8"),"8859_1");//8859-1
-			//java.io.UnsupportedEncodingException: IOS-8859-1 지원안한다는뜻.
+			resFile=new String(filename.getBytes("UTF-8"),"ISO-8859-1");//8859-1
+			//java.io.UnsupportedEncodingException: ISO-8859-1 지원안한다는뜻.
 		}
 		
 		//파일을 전송하기 위한 응답설정

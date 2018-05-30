@@ -1,0 +1,29 @@
+package board.model.service;
+
+import java.sql.Connection;
+import java.util.List;
+
+import board.model.dao.BoardDao;
+import board.model.vo.Board;
+import static common.JDBCTemplate.*;
+public class BoardService {
+	private Connection conn;
+	
+	public BoardService() {
+		conn=getConnection();
+	}
+
+	public List<Board> selectList(int cPage, int numPerPage) {
+		List<Board> list=new BoardDao().selectList(conn,cPage,numPerPage);
+		close(conn);
+		return list;
+	}
+
+	public int selectCount(int cPage, int numPerPage) {
+		int cnt=0;
+		cnt=new BoardDao().selectCount(conn);
+		close(conn);
+		return cnt;
+	}
+
+}

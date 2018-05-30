@@ -1,0 +1,61 @@
+package board.model.dao;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+
+import board.model.vo.Board;
+import static common.JDBCTemplate.*;
+
+public class BoardDao {
+	private PreparedStatement pstmt;
+	private String fileName;
+	private Properties prop;
+	
+	public BoardDao() {
+		fileName=BoardDao.class.getResource("/sql/board/board-query.properties").getPath();
+		
+		prop=new Properties();
+		try {
+			prop.load(new FileReader(fileName));
+		}catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	public List<Board> selectList(Connection conn) {
+		ResultSet rs=null;
+		List<Board>list=new ArrayList();
+		try {
+			pstmt=conn.prepareStatement(prop.getProperty("selectList"));
+			rs=pstmt.executeQuery();
+			while (rs.next()) {
+				Board board=new Board();
+				board.setBoardNo(rs.getInt("board_no"));
+				board.setBoardTitle(rs.getString("board_title"));
+				board.setBoardWriter(rs.getString("board_writer"));
+				board.setBoardContent(rs.getString("board_original_filename"));
+				board.setBoardRenameFileName(rs.getString("board_renamed_filename"));
+				board.setBoardDate(rs.getDate("board_date"));
+				board.setBoardReadCount(rs.getInt("board_readcount"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close(rs);
+			close(pstmt);
+		}
+		
+		return list;
+	}
+
+}

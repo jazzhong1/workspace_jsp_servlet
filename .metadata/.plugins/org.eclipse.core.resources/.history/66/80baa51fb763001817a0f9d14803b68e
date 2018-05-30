@@ -1,0 +1,16 @@
+package board.model.vo;
+
+import java.sql.Date;
+
+public class Board {
+	
+	private int boardNo;
+	private String boardTitle;
+	private String boardWriter;
+	private String boardContent;
+	private String boardOriginalFileName;
+	private String boardRenameFileName;
+	private Date boardDate;
+	private int boardReadCount;
+
+}

@@ -1,0 +1,14 @@
+package board.model.service;
+
+import java.util.List;
+
+import board.model.vo.Board;
+import static common.JDBCTemplate.*;
+public class BoardService {
+
+	public List<Board> selectList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

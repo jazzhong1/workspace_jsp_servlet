@@ -43,7 +43,7 @@
         </tr>
         <tr>
             <th>첨부파일</th>
-            <td style="position:relative;">
+            <td style="position:relative;">va
                 <%if(n.getFilePath()!=null){ %>
                     <input type="file" name="up_file" value="<%=n.getFilePath() %>">
                 <%} else { %>

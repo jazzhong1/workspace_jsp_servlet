@@ -1,0 +1,3 @@
+selectList=select * from (select rownum as rnum, a.* from (select * from board a order by a.board_no desc)a) where rnum between ? and ?
+selectCount=select COUNT(*) as cnt from board
+selectOne=select * from board where board_no=?

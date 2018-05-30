@@ -1,0 +1,27 @@
+package board.model.dao;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.PreparedStatement;
+import java.util.Properties;
+
+public class BoardDao {
+	private PreparedStatement pstmt;
+	private String fileName;
+	private Properties prop;
+	
+	public BoardDao() {
+		fileName=BoardDao.class.getResource("/sql/board/board-query.properties").getPath();
+		
+		prop=new Properties();
+		try {
+			prop.load(new FileReader(fileName));
+		}catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

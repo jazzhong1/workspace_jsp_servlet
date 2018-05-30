@@ -79,10 +79,6 @@ public class NoticeDao {
 	public Notice selectOne(Connection conn, int no) {
 		ResultSet rs=null;
 		Notice notice=null;
-//		흐ㅎㅎㅎ
-//		흐ㅎㅎㅎ
-//		흐ㅎㅎㅎ
-
 		
 		try {
 			pstmt=conn.prepareStatement(prop.getProperty("selectOne"));
