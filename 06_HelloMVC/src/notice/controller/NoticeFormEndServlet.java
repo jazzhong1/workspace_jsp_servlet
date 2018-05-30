@@ -33,9 +33,9 @@ public class NoticeFormEndServlet extends HttpServlet {
 		RequestDispatcher rd = null;
 		if (!ServletFileUpload.isMultipartContent(request)) {
 			// 데이터자체가 끊어졌을때 파일을 올렸는데 제대로 받지 않아쓸때
-			rd = request.getRequestDispatcher("/views/common/msg.jsp");
 			request.setAttribute("msg", "공지사항작성오류[fom:enctype=관리자에게 문의하세요]");
 			request.setAttribute("loc", "/");
+			rd = request.getRequestDispatcher("/views/common/msg.jsp");
 		}
 
 		// 파일 업로드 시작!!

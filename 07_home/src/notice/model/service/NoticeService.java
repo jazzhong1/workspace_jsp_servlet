@@ -31,4 +31,15 @@ public class NoticeService {
 		return notice;
 	}
 
+	public int insertNotice(Notice n) {
+		int result=new NoticeDao().insertNotice(conn,n);
+		if(result>0){
+			commit(conn);
+		}
+		else {
+			rollback(conn);
+		}
+		return result;
+	}
+
 }

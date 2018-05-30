@@ -28,7 +28,8 @@
 		<tr>
 		<th>첨부파일</th>
 		<td><%if(n.getFilePath()!=null){%>
-		<a href="<%=request.getContextPath()%>/noticeFileDownload?filePath="<%=n.getFilePath() %>><img alt='첨부파일' src='<%=request.getContextPath()%>/image/file.png' width='16px'></a>
+		<a href="<%=request.getContextPath()%>/noticeFileDownload?filePath=<%=n.getFilePath()%>"><img alt='첨부파일' src='<%=request.getContextPath()%>/image/file.png' width='16px'></a>
+	
 		<%} %>
 		</td>
 		<tr>

@@ -32,6 +32,8 @@ public class AdminMemberListServlet extends HttpServlet {
 			return;
 		}
 		
+		String notice_title=request.getParameter("title");
+		
 		
 		
 		//페이징처리 시작

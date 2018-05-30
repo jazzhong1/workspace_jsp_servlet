@@ -104,4 +104,22 @@ public class NoticeDao {
 		return notice;
 	}
 
+
+	public int insertNotice(Connection conn, Notice n) {
+		int result=0;
+		try {
+			pstmt=conn.prepareStatement(prop.getProperty("insertNotice"));
+			pstmt.setString(1, n.getNotice_title());
+			pstmt.setString(2, n.getNotice_writer());
+			pstmt.setString(3, n.getNotice_content());
+			pstmt.setString(4, n.getFilePath());
+			result=pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
 }

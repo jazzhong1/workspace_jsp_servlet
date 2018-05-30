@@ -68,7 +68,8 @@
 						{
 							location.href="<%=request.getContextPath()%>/boardList";
 						}
-					</script>			
+					</script>	
+							
 					<% if(memberLoggedIn!=null && 
 				(b.getBoardWriter().equals(memberLoggedIn.getUserId())
 				|| "admin".equals(memberLoggedIn.getUserId()))){ %>
@@ -87,6 +88,7 @@
 		    <form name="boardDelFrm" action="<%=request.getContextPath()%>/boardDelete" method="post">
 		    <input type="hidden" name="no" value="<%=b.getBoardNo() %>" />
 		    <input type="hidden" name="renamedFileName" value="<%= b.getBoardRenameFileName()!=null?b.getBoardRenameFileName():""%>" />
+		   <!-- 어차피 관리는 renameFileName으로관리한다. -->
 		    </form>
 		    <%} %>
   		  </div>

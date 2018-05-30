@@ -54,10 +54,11 @@ public class BoardViewServlet extends HttpServlet {
 
 			}
 		}
-			if (!hasRead) {
+			if (!hasRead) { //hasRead가 false이면~
 				new BoardService().incrementCount(board_no);
 
 				Cookie c = new Cookie("boardCookie", boardCookieVal + "|" + board_no + "|");
+				System.out.println("Cookie"+c);
 				c.setMaxAge(-1);
 				//브라우저가 닫는경우 삭제된다.
 				response.addCookie(c);

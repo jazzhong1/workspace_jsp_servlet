@@ -37,7 +37,7 @@ public class BoardListServlet extends HttpServlet {
 		
 		int cPage;
 		try {
-			cPage=Integer.parseInt((String) request.getAttribute("cPage"));
+			cPage=Integer.parseInt((String) request.getParameter("cPage"));
 		} catch (Exception e) {
 			cPage=1;
 		}
@@ -47,7 +47,7 @@ public class BoardListServlet extends HttpServlet {
 		
 		int numPerPage;
 		try {
-			numPerPage=Integer.parseInt((String) request.getAttribute("numPerPage"));
+			numPerPage=Integer.parseInt((String) request.getParameter("numPerPage"));
 		} catch (Exception e) {
 			numPerPage=10;
 		}
