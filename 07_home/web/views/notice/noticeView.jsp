@@ -33,6 +33,10 @@
 		<%} %>
 		</td>
 		<tr>
+		<tr>
+			<th>내용</th>
+			<td><%=n.getNotice_content()%></td>
+		</tr>
 		<td colspan="2">
 		<input type="button" value="목록으로" onclick="location.href='<%=loc%>'">
 		<%if(memberLoggedIn!=null&&(memberLoggedIn.getMemberId()).equals("admin")) 
@@ -46,11 +50,12 @@
 		}
 
 		 function fn_deleteNotice() {
-			 location.href="<%=request.getContextPath()%>/noticedelete?no=<%=n.getNotice_no()%>";
+			 location.href="<%=request.getContextPath()%>/noticedelete?no=<%=n.getNotice_no()%>&filePath=<%=n.getFilePath()%>";
 		}
 		</script>
 		
 		</tr>
+		
 	</table>
 </div>
 

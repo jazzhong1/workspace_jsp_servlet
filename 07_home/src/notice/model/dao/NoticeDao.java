@@ -122,4 +122,39 @@ public class NoticeDao {
 		return result;
 	}
 
+
+	public int updateNotice(Connection conn, Notice n) {
+//updateNotice=UPDATE NOTICE SET NOTICE_TITLE=?,NOTICE_WRITER=?,NOTICE_CONTENT=?,NOTICE_DATE=SYSDATE,FILEPATH=?,STATUS=DEFAULT WHERE NOTICE_NO=?
+		int result=0;
+		try {
+			pstmt=conn.prepareStatement(prop.getProperty("updateNotice"));
+			pstmt.setString(1, n.getNotice_title());
+			pstmt.setString(2, n.getNotice_writer());
+			pstmt.setString(3, n.getNotice_content());
+			pstmt.setString(4, n.getFilePath());
+			pstmt.setInt(5, n.getNotice_no());
+			result=pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+
+	public int deleteNotice(Connection conn, int no) {
+		int result=0;
+		try {
+			pstmt=conn.prepareStatement(prop.getProperty("deleteNotice"));
+			pstmt.setInt(1, no);
+			result=pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
 }

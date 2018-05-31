@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;07_home/web/views/notice/noitceForm.jsp&apos; to &apos;noticeForm.jsp&apos;" description="Rename resource &apos;noitceForm.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="web/views/notice/noitceForm.jsp" name="noticeForm.jsp" stamp="1527682499797" updateReferences="true"/>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;07_home/web/views/notice/noitceForm.jsp&apos; to &apos;noticeForm.jsp&apos;" description="Rename resource &apos;noitceForm.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="web/views/notice/noitceForm.jsp" name="noticeForm.jsp" stamp="1527682499797" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;07_home/src/board/model/doa&apos; to &apos;dao&apos;" description="Rename resource &apos;doa&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/board/model/doa" name="dao" stamp="1527774668275" updateReferences="true"/>
 </session>

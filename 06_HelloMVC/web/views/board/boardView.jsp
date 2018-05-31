@@ -5,7 +5,7 @@
     <%@ page import="board.model.vo.Board" %>
     <%
         Board b = (Board)request.getAttribute("board");
-    	List<BoardComment> list=(List<BoardComment>)request.getAttribute("list");
+    	List<BoardComment> commentList=(List<BoardComment>)request.getAttribute("list");
     %>
 <%@ include file="/views/common/header.jsp"%>
 
@@ -109,8 +109,6 @@
 		    
 		    
 		    
-		    
-		    
 		    <!-- 댓글작성로직. -->
 		    
 		    
@@ -142,7 +140,7 @@
             				e.preventDefault();
             				return;
             			}
-            			var len=$("textarea[name=boardComment]").val().trim().length;
+            			var len=$("textarea[name=boardCommentContent]").val().trim().length;
             			if(len==0)
             			{	
             				e.preventDefault();	
@@ -155,12 +153,26 @@
             		$("#userId").focus();
             	};
             </script>
-    </div>
-    
+ 		   </div>
         </div>
-        
-        
-        
-  		  </div>
+        <%if(commentList!=null){
+        for(BoardComment bc: commentList){%>
+    <table>
+    <tr class=level1>
+    <td>
+    	<sub class=comment-writer><%=bc.getBoardCommentWriter()%></sub>
+    	<sub class=comment-date><%=bc.getBoardCommnetDate()%></sub>
+		<br>
+		<%=bc.getBoardCommentContent() %>
+    </td>
+     <td>
+            <button class="btn-reply" value="<%=bc.getBoardCommentNO()%>">답글</button>
+        </td>
+    </tr>
+    
+    </table>
+        <%}
+        }%>
+  		</div>
 <%@ include file="/views/common/footer.jsp"%>
 

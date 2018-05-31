@@ -9,10 +9,12 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="flag" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="flag"/>
+			<item value="boardComment"/>
 			<item value="hi"/>
 			<item value="tbl-notice"/>
 		</list>
