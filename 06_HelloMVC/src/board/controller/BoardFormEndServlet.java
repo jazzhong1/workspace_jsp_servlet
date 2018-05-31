@@ -67,7 +67,7 @@ public class BoardFormEndServlet extends HttpServlet {
 		b.setBoardRenameFileName(mpr.getFilesystemName("up_file"));	//리네임한 파일들어옴 즉 폴리시한 rename이 들어옴.
 		
 		//체크 mpr로 넘기니까 getpara로 받지못함.
-		/*
+		
 		String checkFile=mpr.getOriginalFileName("up_file");
 		if(checkFile.contains(".jsp")||checkFile.contains(".exe")||checkFile.contains(".html")){
 		
@@ -78,7 +78,7 @@ public class BoardFormEndServlet extends HttpServlet {
 			request.setAttribute("msg", "올릴수 없는파일입니다.[확장자명 확인]");
 			request.setAttribute("loc", "/");
 			request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);
-		}*/
+		}
 		
 		int result=new BoardService().insertBoard(b);
 		

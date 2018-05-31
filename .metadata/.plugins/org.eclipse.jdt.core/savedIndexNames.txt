@@ -41,7 +41,6 @@ INDEX VERSION 1.130+C:\KH_Academy_Hong\Day_result\KH_Academy_Hong\jsp_servelt\wo
 354123723.index
 2932109749.index
 1393057148.index
-3136887407.index
 1938798840.index
 2125071999.index
 2942569974.index
