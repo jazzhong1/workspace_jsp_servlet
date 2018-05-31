@@ -25,6 +25,15 @@
 	</style>
 	<section id="board-container">
 		<h2>게시판 </h2>
+		<%if(memberLoggedIn!=null) { %>
+		<input type="button" value="글쓰기" id='btn-add' onclick="fn_addBoard();">
+		<% } %>
+		<script>
+			function fn_addBoard()
+			{
+				location.href="<%=request.getContextPath()%>/boardAdd";
+			}
+		</script>
 		<table id="tbl-board">
 		<thead>
 			<tr>

@@ -5,6 +5,8 @@ import java.util.List;
 
 import board.model.dao.BoardDao;
 import board.model.vo.Board;
+import board.model.vo.BoardComment;
+
 import static common.JDBCTemplate.*;
 public class BoardService {
 	private Connection conn;
@@ -46,4 +48,31 @@ public class BoardService {
 		
 	}
 
+	public int insertBoard(Board b) {
+		int result=new BoardDao().insertBoard(conn,b);
+		if(result>0){
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		close(conn);
+		return result;
+	}
+
+	public int insertBoardComment(BoardComment bc) {
+		int result=new BoardDao().insertBoardComment(conn,bc);
+		if(result>0){
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		close(conn);
+		return result;
+	}
+
+	public List<BoardComment> selectCommentList(int board_no) {
+		List<BoardComment> list=new BoardDao().selectCommentList(conn,board_no);
+		close(conn);
+		return list;
+	}
 }

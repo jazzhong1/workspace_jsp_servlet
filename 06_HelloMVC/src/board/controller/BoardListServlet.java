@@ -27,13 +27,13 @@ public class BoardListServlet extends HttpServlet {
 		
 		Member memberLoggedIn=(Member)request.getSession().getAttribute("memberLoggedIn");
 		
-		
+	/*	
 		if(memberLoggedIn==null){
 			request.setAttribute("msg", "잘못된 경로로 접근하셨습니다.");
 			request.setAttribute("loc", "/");
 			request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);
 			return;
-		}
+		}*/
 		
 		int cPage;
 		try {

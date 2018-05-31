@@ -1,8 +1,11 @@
+<%@page import="board.model.vo.BoardComment"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ page import="board.model.vo.Board" %>
     <%
         Board b = (Board)request.getAttribute("board");
+    	List<BoardComment> list=(List<BoardComment>)request.getAttribute("list");
     %>
 <%@ include file="/views/common/header.jsp"%>
 
@@ -12,10 +15,12 @@
     table#tbl-board{width:500px; margin:0 auto; border:1px solid black; border-collapse:collapse; clear:both; }
     table#tbl-board th {width: 125px; border:1px solid; padding: 5px 0; text-align:center;} 
     table#tbl-board td {border:1px solid; padding: 5px 0 5px 10px; text-align:left;}
+	input#btn-add{float:right; margin: 0 0 15px;}
     </style>
 
 		<div id="board-container">
 		<h2>게시판</h2>
+		
 		<table id="tbl-board">
 			<tr>
 				<th>글번호</th>
@@ -81,17 +86,16 @@
 		</table>
 		
 		
-		<!--관리자만볼수있으며 hiiden으로 값을 감춰놓고 함수문만 별도로 보낸다.-->
-			<% if(memberLoggedIn!=null && 
+		
+	<% if(memberLoggedIn!=null && 
             (b.getBoardWriter().equals(memberLoggedIn.getUserId())
             || "admin".equals(memberLoggedIn.getUserId())) ){ %>
 		    <form name="boardDelFrm" action="<%=request.getContextPath()%>/boardDelete" method="post">
 		    <input type="hidden" name="no" value="<%=b.getBoardNo() %>" />
-		    <input type="hidden" name="renamedFileName" value="<%= b.getBoardRenameFileName()!=null?b.getBoardRenameFileName():""%>" />
-		   <!-- 어차피 관리는 renameFileName으로관리한다. -->
+		    <input type="hidden" name="renamedFileName" 
+		    value="<%= b.getBoardRenameFileName()!=null?b.getBoardRenameFileName():""%>" />
 		    </form>
 		    <%} %>
-  		  </div>
   		  
 		    <script>
 		    function fn_updateBoard(){
@@ -102,5 +106,61 @@
 		        $("[name=boardDelFrm]").submit();
 		    }
 		    </script>
+		    
+		    
+		    
+		    
+		    
+		    <!-- 댓글작성로직. -->
+		    
+		    
+		    <div id="comment-container">
+        <%-- text-area 포커스, 등록버튼을 누른 경우 로그인여부를 검사해서 경고창을 띄어줌. --%>
+        <div class="comment-editor">
+            <form name="boardCommentFrm" action="<%=request.getContextPath()%>/boardCommentInsert" method="post">
+                <input type="hidden" name="boardRef" value="<%=b.getBoardNo() %>" />
+                <input type="hidden" name="boardCommentWriter" value="<%=memberLoggedIn!=null?memberLoggedIn.getUserId():"" %>" />
+                <input type="hidden" name="boardCommentLevel" value="1" />
+                <input type="hidden" name="boardCommentRef" value="0" /> <!-- 댓글인 경우  참조댓글이 없으므로 0으로 처리함. -->
+             	<!-- 히든으로 넘겨줌 -->
+                <textarea name="boardCommentContent" cols="60" rows="3"></textarea>
+                <button type="submit" id="btn-insert">등록</button>
+            </form>
+          <script>
+            	$(function(){
+            		$("[name=boardCommentContent]").focus(function(e){
+            			if(<%=memberLoggedIn==null%>){
+            				fn_loginAlert();
+            				e.preventDefault();
+            				return;
+            			}
+            		});
+            		$("[name=boardCommentFrm]").submit(function(e){
+            			if(<%=memberLoggedIn==null%>)
+            			{
+            				fn_loginAlert();
+            				e.preventDefault();
+            				return;
+            			}
+            			var len=$("textarea[name=boardComment]").val().trim().length;
+            			if(len==0)
+            			{	
+            				e.preventDefault();	
+            			}
+            		});
+            	});
+            	function fn_loginAlert()
+            	{
+            		alert("로그인 후 이용할 수 있습니다.");
+            		$("#userId").focus();
+            	};
+            </script>
+    </div>
+    
+        </div>
+        
+        
+        
+  		  </div>
 <%@ include file="/views/common/footer.jsp"%>
 

@@ -14,6 +14,8 @@ import java.util.Properties;
 import org.apache.catalina.connector.Request;
 
 import board.model.vo.Board;
+import board.model.vo.BoardComment;
+
 import static common.JDBCTemplate.*;
 
 public class BoardDao {
@@ -127,6 +129,73 @@ public class BoardDao {
 		}
 		return result;
 		
+	}
+
+	public int insertBoard(Connection conn, Board b) {
+		int result=0;
+		try {
+			pstmt=conn.prepareStatement(prop.getProperty("insertBoard"));
+			pstmt.setString(1, b.getBoardTitle());
+			pstmt.setString(2, b.getBoardWriter());
+			pstmt.setString(3, b.getBoardContent());
+			pstmt.setString(4, b.getBoardOriginalFileName());
+			pstmt.setString(5, b.getBoardRenameFileName());
+			result=pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	public int insertBoardComment(Connection conn, BoardComment bc) {
+		int result=0;
+		try {
+			pstmt=conn.prepareStatement(prop.getProperty("insertBoardComment"));
+			pstmt.setInt(1, bc.getBoardCommentLevel());
+			pstmt.setString(2, bc.getBoardCommentWriter());
+			pstmt.setString(3, bc.getBoardCommentContent());
+			pstmt.setInt(4, bc.getBoardRef());
+			//0으로 설정했기때문에 제약조건발쌩
+			pstmt.setString(5, (bc.getBoardCommnetRef()==0?null:String.valueOf(bc.getBoardCommnetRef())));
+			//댓글은 무조건 null로 들어간다.
+			result=pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	public List<BoardComment> selectCommentList(Connection conn, int no) {
+		ResultSet rs=null;
+		List<BoardComment> list=new ArrayList();
+		try {
+			pstmt=conn.prepareStatement(prop.getProperty("selectCommentList"));
+			pstmt.setInt(1,no );
+			rs=pstmt.executeQuery();
+			while (rs.next()) {
+				BoardComment boc=new BoardComment();
+				boc.setBoardCommentNO(rs.getInt("board_comment_no"));
+				boc.setBoardCommentLevel(rs.getInt("board_comment_level"));
+				boc.setBoardCommentWriter(rs.getString("board_comment_writer"));
+				boc.setBoardCommentContent(rs.getString("board_comment_content"));
+				boc.setBoardRef(rs.getInt("board_ref"));
+				boc.setBoardCommnetRef(rs.getInt("board_comment_ref"));
+				boc.setBoardCommnetDate(rs.getDate("board_comment_date"));
+				list.add(boc);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close(rs);
+			close(pstmt);
+		}
+		return list;
 	}
 
 }
