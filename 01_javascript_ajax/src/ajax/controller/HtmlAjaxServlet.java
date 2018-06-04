@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import ajax.model.vo.User;
 
-import ajax.User;
 
 /**
  * Servlet implementation class HtmlAjaxServlet

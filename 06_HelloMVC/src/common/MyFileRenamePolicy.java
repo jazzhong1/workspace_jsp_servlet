@@ -17,8 +17,9 @@ public class MyFileRenamePolicy implements FileRenamePolicy{
 			//날짜 형식으로 밀리 세컨까지 표시
 			SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMdd_HHmmssSSS");
 			//0~999까지의 임의이 수 난수발생.
-			//확장자명 가져오기
 			int rndNum=(int)(Math.random()*1000);
+
+			//확장자명 가져오기
 			String oldName=oldFile.getName();
 			//확장자명
 			String ext="";
