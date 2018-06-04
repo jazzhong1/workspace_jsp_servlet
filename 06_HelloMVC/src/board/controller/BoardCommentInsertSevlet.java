@@ -34,7 +34,7 @@ public class BoardCommentInsertSevlet extends HttpServlet {
 		
 		int result=new BoardService().insertBoardComment(bc);
 		String view="/views/common/msg.jsp";
-		String loc="boardView?no="+boardRef;	//게시판 번호
+		String loc="/boardView?no="+boardRef;	//게시판 번호
 		String msg="";
 		if(result>0){
 			msg="작성완료";

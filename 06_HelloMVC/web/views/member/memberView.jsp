@@ -94,7 +94,7 @@
 	</tr>
 	<tr>
 		<th>이메일</th>
-		<td><input type="email" id="email" value="<%=member.getEmail() %>"></td>
+		<td><input type="email" name="email" id="email" value="<%=member.getEmail() %>"></td>
 	</tr>
 	<tr>
 		<th>전화번호</th>

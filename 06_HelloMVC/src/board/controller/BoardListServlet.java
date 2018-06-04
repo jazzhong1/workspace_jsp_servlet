@@ -24,17 +24,6 @@ public class BoardListServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
-		
-		Member memberLoggedIn=(Member)request.getSession().getAttribute("memberLoggedIn");
-		
-	/*	
-		if(memberLoggedIn==null){
-			request.setAttribute("msg", "잘못된 경로로 접근하셨습니다.");
-			request.setAttribute("loc", "/");
-			request.getRequestDispatcher("/views/common/msg.jsp").forward(request, response);
-			return;
-		}*/
-		
 		int cPage;
 		try {
 			cPage=Integer.parseInt((String) request.getParameter("cPage"));
@@ -108,7 +97,7 @@ public class BoardListServlet extends HttpServlet {
 
 		// [다음]버튼 만들기
 
-		if (pageNo > totalPage) {
+		if (pageNo >= totalPage) {
 			pageBar += "<span>[다음]</span>";
 		} else {
 			pageBar += "<a href='" + request.getContextPath() + "/boardList?cPage=" + pageNo + "&numPerPage=" + numPerPage
@@ -116,7 +105,6 @@ public class BoardListServlet extends HttpServlet {
 		}
 
 		System.out.println("pageBar : " + pageBar);
-		
 		
 		
 		request.setAttribute("board", list);

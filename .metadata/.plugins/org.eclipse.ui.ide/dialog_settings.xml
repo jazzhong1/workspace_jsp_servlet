@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\KH_Academy_Hong\Day_result\KH_Academy_Hong\jsp_servelt\workspace_jsp_servlet\01_javascript_ajax"/>
 		<item value="C:\KH_Academy_Hong\Day_result\KH_Academy_Hong\jsp_servelt\workspace_jsp_servlet\07_home"/>
 		<item value="C:\KH_Academy_Hong\Day_result\KH_Academy_Hong\jsp_servelt\workspace_jsp_servlet\06_HelloMVC"/>
 	</list>

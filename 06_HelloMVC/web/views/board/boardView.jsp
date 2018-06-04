@@ -16,6 +16,23 @@
     table#tbl-board th {width: 125px; border:1px solid; padding: 5px 0; text-align:center;} 
     table#tbl-board td {border:1px solid; padding: 5px 0 5px 10px; text-align:left;}
 	input#btn-add{float:right; margin: 0 0 15px;}
+	table#tbl-comment{width:580px; margin:0 auto; border-collapse:collapse; clear:both; } 
+    table#tbl-comment tr td{border-bottom:1px solid; border-top:1px solid; padding:5px; text-align:left; line-height:120%;}
+    table#tbl-comment tr td:first-of-type{padding: 5px 5px 5px 50px;}
+    table#tbl-comment tr td:last-of-type {text-align:right; width: 100px;}
+    table#tbl-comment button.btn-reply{display:none;}
+    table#tbl-comment button.btn-delete{display:none;}
+    table#tbl-comment tr:hover {background:lightgray;}
+    table#tbl-comment tr:hover button.btn-reply{display:inline;}
+    table#tbl-comment tr:hover button.btn-delete{display:inline;}
+    table#tbl-comment tr.level2 {color:gray; font-size: 14px;}
+    table#tbl-comment sub.comment-writer {color:navy; font-size:14px}
+    table#tbl-comment sub.comment-date {color:tomato; font-size:10px}
+    table#tbl-comment tr.level2 td:first-of-type{padding-left:100px;}
+    table#tbl-comment tr.level2 sub.comment-writer {color:#8e8eff; font-size:14px}
+    table#tbl-comment tr.level2 sub.comment-date {color:#ff9c8a; font-size:10px}
+    textarea {resize: none;}
+	
     </style>
 
 		<div id="board-container">
@@ -142,6 +159,7 @@
             			}
             			var len=$("textarea[name=boardCommentContent]").val().trim().length;
             			if(len==0)
+            				
             			{	
             				e.preventDefault();	
             			}
@@ -154,25 +172,83 @@
             	};
             </script>
  		   </div>
-        </div>
-        <%if(commentList!=null){
-        for(BoardComment bc: commentList){%>
-    <table>
-    <tr class=level1>
-    <td>
-    	<sub class=comment-writer><%=bc.getBoardCommentWriter()%></sub>
-    	<sub class=comment-date><%=bc.getBoardCommnetDate()%></sub>
-		<br>
-		<%=bc.getBoardCommentContent() %>
-    </td>
-     <td>
-            <button class="btn-reply" value="<%=bc.getBoardCommentNO()%>">답글</button>
-        </td>
-    </tr>
-    
-    </table>
-        <%}
-        }%>
-  		</div>
+ 		   
+ 		   
+     <table id='tbl-comment'>
+			<% if(commentList!=null) { 
+				for(BoardComment bc:commentList)
+				{ 
+				if(bc.getBoardCommentLevel()==1) {%>        	
+        		<tr class='level1'>
+        			<td> 
+        				<sub class='comment-writer'><%=bc.getBoardCommentWriter()%></sub>
+        				<sub class='comment-date'><%=bc.getBoardCommnetDate()%></sub>
+        				<br/>
+        				<%=bc.getBoardCommentContent() %>
+        			</td>
+        	        			
+        			<td>
+        				<button class='btn-reply' value="<%=bc.getBoardCommentNO() %>">답글</button>
+        				<button class='btn-delete' value="<%=bc.getBoardCommentNO() %>">삭제</button>
+        			</td>
+        		</tr>
+        	<% } 
+				else 
+				{ %>
+					<tr class='level2'>
+						<td>
+							<sub><%=bc.getBoardCommentWriter()%></sub>
+							<sub><%=bc.getBoardCommnetDate()%></sub>
+							<%=bc.getBoardCommentContent() %>
+						</td>
+						<td>	<!--같이내려와서 정렬이되야하는데 위에서 colum이 한개였기떄문에 맞춰줘야한다.-->
+						      <button class='btn-delete' value="<%=bc.getBoardCommentNO() %>">삭제</button>
+						
+						</td>
+					</tr>
+			<% }
+			}
+        } %>
+        	<script>
+        			$(".btn-reply").on('click',function(e){
+        						<% if(memberLoggedIn!=null) { %>
+        							//화면에 출력될 답글 입력창 만들기
+        							var tr=$("<tr></tr>");//태그생성
+        							var html="<td style='display:none;text-align:left;'colspan=2>";
+        							html+='<form action="<%=request.getContextPath()%>/boardCommentInsert" method="post">';
+        							html+="<input type='hidden' name='boardRef' value='<%=b.getBoardNo()%>'/>";
+        							html+="<input type='hidden' name='boardCommentWriter' value='<%=memberLoggedIn.getUserId()%>'/>";
+        							html+="<input type='hidden' name='boardCommentLevel' value='2'/>";
+        							html+="<input type='hidden' name='boardCommentRef' value='"+$(this).val()+"'/>";
+        							html+="<textarea name='boardCommentContent' cols='60' rows='1'></textarea>";
+        							html+="<button type='submit' class='btn-insert2'>등록</button>";
+        							html+="</form></td>";   							
+        							//위에서 작성한 html구문을 tr변수 text노드에 삽입
+        							tr.html(html);
+        							//작성된 tr태그(객체)를 원본 html구문의 
+        							//(tr class=leve1)뒤에 삽입
+        							tr.insertAfter($(this).parent().parent()).children("td").slideDown(100);
+        							//이벤트가 1회만 발생하게 제한
+        							$(this).off('click');
+        							//답글달고 버튼을 누르면 해당 서블릿에 데이터전송
+        							tr.find('form').submit(function(e){
+        									if(<%=memberLoggedIn==null%>)
+        									{
+        										fn_loginAlert();
+        										e.preventDefault();
+        									}
+        									var len=$(this).children('textarea').val().trim().length;
+        									if(len==0)
+        									{
+        										e.preventDefault();
+        										tr.find('textarea').focus();
+        									}
+        								});
+        							<% } %>		
+        					});
+        		</script>
+       	 </table>
+    </div>
+    </div>
 <%@ include file="/views/common/footer.jsp"%>
 

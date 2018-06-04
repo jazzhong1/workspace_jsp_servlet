@@ -84,7 +84,7 @@
 				</tr>
 				<tr>
 				<th>이메일</th>
-					<td><input type="email" placeholder="abc@ab.com" id="email"></td>
+					<td><input type="email" name="email" placeholder="abc@ab.com" id="email"></td>
 				</tr>
 				<tr>
 				<th>전화번호</th>
