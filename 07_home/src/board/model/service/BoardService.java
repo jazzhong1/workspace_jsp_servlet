@@ -32,6 +32,29 @@ public class BoardService {
 		close(conn);
 		return list;
 	}
+
+
+
+	public Board selectOne(int no) {
+		Board board=new BoardDao().selectOne(conn,no);
+		close(conn);
+		return board;
+	}
+
+
+
+	public void incrementCount(int no) {
+		new BoardDao().incrementCount(conn,no);	
+		close(conn);
+
+	}
+
+
+
+	public int insertBoard(Board b) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 
 }
