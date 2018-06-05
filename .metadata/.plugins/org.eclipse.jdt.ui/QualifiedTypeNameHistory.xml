@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="member.model.vo.Member"/>
-<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
-<fullyQualifiedTypeName name="notice.model.vo.Notice"/>
-<fullyQualifiedTypeName name="notice.model.dao.NoticeDao"/>
-<fullyQualifiedTypeName name="com.sun.java.util.jar.pack.Package.File"/>
-<fullyQualifiedTypeName name="com.oreilly.servlet.multipart.FileRenamePolicy"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletOutputStream"/>
 <fullyQualifiedTypeName name="java.io.BufferedOutputStream"/>
@@ -20,7 +14,6 @@
 <fullyQualifiedTypeName name="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"/>
 <fullyQualifiedTypeName name="notice.model.service.NoticeService"/>
 <fullyQualifiedTypeName name="org.apache.tomcat.dbcp.dbcp2.cpdsadapter.PStmtKeyCPDS"/>
-<fullyQualifiedTypeName name="oracle.net.aso.p"/>
 <fullyQualifiedTypeName name="java.net.ConnectException"/>
 <fullyQualifiedTypeName name="common.JDBCTemplate"/>
 <fullyQualifiedTypeName name="javafx.scene.layout.Pane"/>
@@ -50,14 +43,21 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="sun.font.CreatedFontTracker"/>
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
-<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="com.sun.xml.internal.fastinfoset.vocab.Vocabulary"/>
 <fullyQualifiedTypeName name="org.apache.el.MethodExpressionLiteral"/>
-<fullyQualifiedTypeName name="ajax.model.vo.User"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="model.vo.User"/>
+<fullyQualifiedTypeName name="jdk.nashorn.api.scripting.JSObject"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.NEW"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javax.jws.soap.SOAPBinding.Use"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="oracle.net.aso.p"/>
+<fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="ajax.model.vo.User"/>
+<fullyQualifiedTypeName name="com.google.gson.Gson"/>
 </qualifiedTypeNameHistroy>
