@@ -19,6 +19,7 @@ div#test {
 				dataType:"html",
 				type:"get",
 				success: function(data) {
+						console.log(data);
 					$('#test').html(data);
 				}
 			});

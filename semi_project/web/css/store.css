@@ -1,0 +1,17 @@
+/* 스토어 상세정보스타일 */
+
+section ul {
+list-style-type: none;
+padding-left: 0px;
+}
+
+#row_padding {
+padding-top: 15px;
+padding-bottom: 15px;
+}
+
+/* 순서를 나타내는 점 제거 및 패딩값 0 고정*/
+    section ul {
+      list-style-type: none;
+      padding-left: 0px;
+    }

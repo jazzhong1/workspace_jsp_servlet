@@ -1,0 +1,19 @@
+
+  /*nav-tabs 넓이 고정시켜 칸 유지 width 로 크기 맞추기*/
+
+      .nav-tabs > li {
+          display: table-cell; 
+          width: 25%;
+          text-align:center;
+      
+      }
+       
+<<<<<<< HEAD
+         .panel-body .panel-heading{
+        border-top: 2px solid rgba(128, 128, 128, 0.589);
+        background-color: rgba(128, 128, 128, 0.336);               
+        width: 90%;
+      }
+=======
+      
+>>>>>>> studyexe1-patch-1

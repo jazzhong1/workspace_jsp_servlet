@@ -47,7 +47,7 @@ public class TestServlet3 extends HttpServlet {
 		}	
 		System.out.println(csv);
 		response.setContentType("text/csv;charset=UTF-8");
-		PrintWriter out =response.getWriter();
+		PrintWriter out =response.getWriter();		//ajax로 보낼떄 중요...
 		out.append(csv);
 	}
 

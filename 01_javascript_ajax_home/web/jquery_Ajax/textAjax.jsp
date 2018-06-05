@@ -23,7 +23,7 @@ div#text{
 				dataType: "text",
 				type: "get",
 				success: function(data) {
-					$("#text").html(data);
+					$("#text").html(data);		//리스트는 이전ajax.jsp에서 돌려서 가져오는게 좋을듯...
 				}
 			});
 		});
