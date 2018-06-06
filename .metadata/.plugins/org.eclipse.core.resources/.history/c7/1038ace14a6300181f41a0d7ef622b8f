@@ -1,6 +1,0 @@
-selectMemberList=select * from (select rownum as rnum, a.* from (select * from notice a order by a.notice_no desc)a) where rnum between ? and ? and status=Y
-selectOne=SELECT * FROM NOTICE WHERE NOTICE_NO=? AND STATUS='Y'
-selectCount=SELECT COUNT(*) FROM NOTICE
-updateNotice=UPDATE NOTICE SET NOTICE_TITLE=?,NOTICE_WRITER=?,NOTICE_CONTENT=?,NOTICE_DATE=SYSDATE,FILEPATH=?,STATUS=DEFAULT WHERE NOTICE_NO=?
-insertNotice=INSERT INTO NOTICE VALUES(SEQ_NOTICE_NO.NEXTVAL,?,?,?,DEFAULT,?,DEFAULT)
-deleteNotice=DELETE FROM NOTICE WHERE NOTICE_NO=?
