@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <servers>
-  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/hong-config" deployDir="wtpwebapps" hostname="localhost" id="hong" name="hong" runtime-id="hong" serveModulesWithoutPublish="true" server-type="org.eclipse.jst.server.tomcat.80" server-type-id="org.eclipse.jst.server.tomcat.80" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="26">
-    <list key="modules" value0="01_javascript_ajax::org.eclipse.jst.jee.server:01_javascript_ajax::jst.web::3.1"/>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/hong-config" deployDir="wtpwebapps" hostname="localhost" id="hong" name="hong" runtime-id="hong" serveModulesWithoutPublish="true" server-type="org.eclipse.jst.server.tomcat.80" server-type-id="org.eclipse.jst.server.tomcat.80" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="27">
+    <list key="modules" value0="01_javascript_ajax::org.eclipse.jst.jee.server:01_javascript_ajax::jst.web::3.1" value1="semi_project::org.eclipse.jst.jee.server:semi_project::jst.web::3.1"/>
   </server>
 </servers>

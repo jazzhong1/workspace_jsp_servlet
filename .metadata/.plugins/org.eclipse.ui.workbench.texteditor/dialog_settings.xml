@@ -13,6 +13,7 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="$"/>
 			<item value="btn-reply"/>
 			<item value="flag"/>
 			<item value="boardComment"/>

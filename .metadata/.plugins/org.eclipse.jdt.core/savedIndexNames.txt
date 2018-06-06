@@ -4,8 +4,8 @@ INDEX VERSION 1.130+C:\KH_Academy_Hong\Day_result\KH_Academy_Hong\jsp_servelt\wo
 2769515786.index
 636016986.index
 2538215463.index
-503605182.index
 3381449817.index
+503605182.index
 1136463918.index
 73860848.index
 582872082.index
@@ -19,10 +19,9 @@ INDEX VERSION 1.130+C:\KH_Academy_Hong\Day_result\KH_Academy_Hong\jsp_servelt\wo
 4213348864.index
 501619850.index
 3388333077.index
-3633111909.index
 3070039149.index
+3633111909.index
 179912546.index
-3486484905.index
 1608805883.index
 2988524170.index
 607522861.index
@@ -32,8 +31,8 @@ INDEX VERSION 1.130+C:\KH_Academy_Hong\Day_result\KH_Academy_Hong\jsp_servelt\wo
 4065846088.index
 3803645172.index
 2493491530.index
-2668948516.index
 1768933493.index
+2668948516.index
 4054038625.index
 1220308574.index
 1078848896.index
@@ -44,7 +43,6 @@ INDEX VERSION 1.130+C:\KH_Academy_Hong\Day_result\KH_Academy_Hong\jsp_servelt\wo
 68417459.index
 354123723.index
 2932109749.index
-1393057148.index
 3136887407.index
 1938798840.index
 2125071999.index
