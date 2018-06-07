@@ -317,11 +317,8 @@
                       </form>
 
                     </li>
-
-
                   </ul>
                   </div>
-
                 </div>
 
               </div>
@@ -400,7 +397,6 @@
       }
     }
 
-   
 
     $(function() {
       $("#reset-modify-button").click(function() {
