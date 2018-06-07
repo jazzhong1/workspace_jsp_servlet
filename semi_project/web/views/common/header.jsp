@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="<%=request.getContextPath() %>/css/all.css">
   <link rel="stylesheet" href="<%=request.getContextPath() %>/css/navbar.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   
   
   <!-- 회원가입로그인캐러셀아이콘에 필요한것 -->
