@@ -3,7 +3,6 @@
     
 <%//서블릿에서 ㄹ %>
 
-
 			<%for(int i=0; i<10; i++){ %>
 				<!--클릭리스너 만들기-->
 				<li class='store_list' value="1">
@@ -34,7 +33,11 @@
 							<div class="col-xs-5">
 								<br> <img src="http://proxyprivat.com/images/noimage.jpeg"
 									alt="" class='img_size'>
+									
 							</div>
+							
+                  
+                    
 							<div class="col-xs-7">
 								<br>
 								<p>주소</p>
@@ -60,10 +63,11 @@
 		e.preventDefault();
 	})
 	// 눌럿을떄 바로 이동
-	$(".store_list").click(function() {
+	$(".store_list").on('click', function(e) {
 		var truck_no=$(this).val();
 		console.log(truck_no);
-		location.href = "서블릿으로보내고?truck_pk="+truck_no;
+		//location.href = "서블릿으로보내고?truck_pk="+truck_no;	
+		location.href = "<%=request.getContextPath()%>/truckSelectOne";	
 	});
 </script>
     

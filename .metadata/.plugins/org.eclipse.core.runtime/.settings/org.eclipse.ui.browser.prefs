@@ -1,4 +1,4 @@
 browser-choice=1
 browsers=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<web-browsers current\="2">\r\n<system/>\r\n<external location\="C\:\\Program Files\\Internet Explorer\\iexplore.exe" name\="Internet Explorer"/>\r\n<external location\="C\:\\Users\\jazzh\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe" name\="Chrome"/>\r\n</web-browsers>
 eclipse.preferences.version=1
-internalWebBrowserHistory=http\://localhost\:9090/07_home/index.jsp|*|http\://localhost\:9090/07_home/views/notice/noticeList.jsp|*|http\://localhost\:9090/07_home/noticeList|*|http\://localhost\:9090/07_home/login.do|*|http\://localhost\:9090/06_HelloMVC/index.jsp|*|
+internalWebBrowserHistory=file\:///C\:/KH_Academy_Hong/Day_result/KH_Academy_Hong/jsp_servelt/workspace_jsp_servlet/semi_project/web/images/food.png|*|file\:/C\:/KH_Academy_Hong/Day_result/KH_Academy_Hong/jsp_servelt/workspace_jsp_servlet/semi_project/web/images/food.png|*|http\://localhost\:9090/07_home/index.jsp|*|http\://localhost\:9090/07_home/views/notice/noticeList.jsp|*|http\://localhost\:9090/07_home/noticeList|*|http\://localhost\:9090/07_home/login.do|*|http\://localhost\:9090/06_HelloMVC/index.jsp|*|

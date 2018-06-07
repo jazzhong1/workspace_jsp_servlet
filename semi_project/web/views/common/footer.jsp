@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/footer.css">
+ <!-- 푸터아이콘에 필요한것 -->
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+ 
 
  <!-- Footer -->
   <footer id="footer" class="container">

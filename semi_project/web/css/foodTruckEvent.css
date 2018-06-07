@@ -1,0 +1,81 @@
+
+    .table1 .foodinfor {
+      width: 50%;
+    }
+
+    .truck-panel-header {
+      text-align: center;
+      font-weight: bold;
+      font-size: 13pt;
+    }
+
+    .panel-1 {
+      /*기본정보*/
+      text-align: center;
+    }
+
+    .panel-2 {
+      /*메뉴 리뷰 이벤*/
+      text-align: center;
+    }
+
+    .panel-2-body-font {
+      font-size: 12pt;
+      font-weight: bold;
+    }
+
+    #truck-title-p {
+      font-size: 15pt;
+      font-weight: bold;
+    }
+
+    .truck-basic-font {
+      font-size: 13pt;
+    }
+
+    .truck-basic-font-bold {
+      font-weight: bold;
+    }
+
+    .icon {
+      color: blue;
+      font-size: 15px;
+      /*추후수정*/
+    }
+
+/*게시판 테이블 스타일*/
+
+.table {
+  text-align: center;
+  
+  border-bottom: 2px solid rgba(134, 134, 133, 0.329);
+  }
+  
+  .table thead {
+  
+  border-top: 3px solid rgba(114, 114, 111, 0.329);
+  
+  }
+  
+  #tablehead {
+  background-color:#b1ddab6b;
+  color: white;
+  }
+  
+  .table tr:nth-of-type(2n) {
+  background-color:#44a3e207;
+  }
+  
+  .table tr>td:first-of-type {
+  text-align: center;
+  
+  }
+
+/*페이지 번호 정렬*/
+.pagination{
+  display: block;
+  text-align: center;
+}
+.pagination>li>a{
+    float:none;
+ }

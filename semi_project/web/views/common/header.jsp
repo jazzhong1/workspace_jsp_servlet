@@ -7,19 +7,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-  <!-- 회원가입로그인캐러셀아이콘에 필요한것 -->
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <!-- 푸터아이콘에 필요한것 -->
-  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="<%=request.getContextPath() %>/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<%=request.getContextPath() %>/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="<%=request.getContextPath() %>/css/all.css">
   <link rel="stylesheet" href="<%=request.getContextPath() %>/css/navbar.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   
- 
+  
+  <!-- 회원가입로그인캐러셀아이콘에 필요한것 -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
   <script src='http://code.jquery.com/jquery-3.1.1.min.js'></script>
-  <script src='js/bootstrap.js'></script>
+  <script src='<%=request.getContextPath()%>/js/bootstrap.js'></script>
 
   <title>Main</title>
 

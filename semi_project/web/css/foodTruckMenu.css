@@ -1,0 +1,45 @@
+
+    /*푸드트럭정보*/
+    .table1 .foodinfor {
+      width: 50%;
+    }
+
+    .truck-panel-header {
+      text-align: center;
+      font-weight: bold;
+      font-size: 13pt;
+    }
+
+    .panel-1 {
+      /*기본정보*/
+      text-align: center;
+    }
+
+    .panel-2 {
+      /*메뉴 리뷰 이벤*/
+      text-align: center;
+    }
+
+    .panel-2-body-font {
+      font-size: 12pt;
+      font-weight: bold;
+    }
+
+    #truck-title-p {
+      font-size: 15pt;
+      font-weight: bold;
+    }
+
+    .truck-basic-font {
+      font-size: 13pt;
+    }
+
+    .truck-basic-font-bold {
+      font-weight: bold;
+    }
+
+    .icon {
+      color: blue;
+      font-size: 15px;
+      /*추후수정*/
+    }
