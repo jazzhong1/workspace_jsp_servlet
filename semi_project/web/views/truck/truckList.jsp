@@ -40,9 +40,9 @@
                     
 							<div class="col-xs-7">
 								<br>
-								<p>주소</p>
+								<p>위치</p>
 								<p>평점</p>
-								<p>평균금액</p>
+								<p>최소금액</p>
 							</div>
 							<div class='col-xs-4'></div>
 							<div class='col-xs-4'></div>

@@ -51,7 +51,7 @@
           <div class="panel-group">
 
             <div id="truckBasic" class='row'>
-       			<!--ajax-->
+       
             </div>
 
             <br>
@@ -73,25 +73,50 @@
                   <div class="page-header">
                     <p style="font-size:14pt; font-weight:bold;">&nbsp;&nbsp;&nbsp;이벤트</p>
                   </div>
-                  <table class="table panel-default text-center">
-                    <thead class="panel-heading" id='tablehead'>
-                      <tr>	
-                        <td class="table-header-font">번호</td>
-                        <td class="table-header-font">점포명</td>
-                        <td class="table-header-font">이벤트제목</td>
-                      </tr>
-                    </thead>
-                    <tbody class="panel-body">
-                      <tr>
-                        <td>1</td>
-                        <td>푸드트럭1</td>
-                        <td><a href="#">푸드트럭이벤트1입니</a></td>
-                        <tr>
-                        <td>2</td>
-                        <td>푸드트럭1</td>
-                        <td><a href="#">푸드트럭이벤트1입니</a></td>
-                    </tbody>
-                  </table>
+                  <table class="table">
+                                <thead id='tablehead'>
+                                        <tr>
+                                            <td>번호</td>
+                                            <td>제목</td>
+                                            <td>기간</td>
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>제목1</td>
+                                            <td>18.10.11~18.10.15</td>
+                                            <!--트럭에서 pk가져와서 제목이랑 기간쏴주기~-->
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>제목1</td>
+                                            <td>18.10.11~18.10.15</td>
+												<!--트럭에서 pk가져와서 제목이랑 기간쏴주기~-->
+                                            
+                                        </tr>
+                                        <tr>
+                                          	<td>2</td>
+                                            <td>제목1</td>
+                                            <td>18.10.11~18.10.15</td>												<!--트럭에서 pk가져와서 제목이랑 기간쏴주기~-->
+                                     	<!--트럭에서 pk가져와서 제목이랑 기간쏴주기~-->
+                                            
+                                        </tr>
+                                </tbody>
+                            </table>
+                              <nav>
+                        <ul class="pagination">
+                            <li><a href="#"><span aria-hidden="true">«</span><span class="sr-only">Previous</span></a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a></li>
+                        </ul>
+                    </nav>
 
 
 

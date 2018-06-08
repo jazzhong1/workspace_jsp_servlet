@@ -1,4 +1,4 @@
-package truck;
+package truck.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

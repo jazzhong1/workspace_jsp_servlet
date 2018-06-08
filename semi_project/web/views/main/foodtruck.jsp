@@ -54,7 +54,6 @@
 						<option value='1' >평점순</option>
 						<option value='2'>영업순</option>
 						<option value='3'>리뷰순</option>
-						<option value='4'>이벤트순</option>
 					</select>
 				</form>
 				</div>
