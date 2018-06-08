@@ -216,7 +216,8 @@
                         <div class="row">
                           <div class="col-xs-12 result-btn-positon">
 							<br>
-                             <button id="reset-modify-button" class='btn btn-success result-btn' type="submit">수정</button>
+                            <button id="modify-button" class='btn btn-success result-btn' type="submit">수정</button>
+                             <button id="reset-modify-button" class='btn btn-success result-btn' type="reset">취소</button>
 							<hr>
                           </div>
 
@@ -396,7 +397,6 @@
         reader.readAsDataURL(input.files[0]);
       }
     }
-
 
     $(function() {
       $("#reset-modify-button").click(function() {

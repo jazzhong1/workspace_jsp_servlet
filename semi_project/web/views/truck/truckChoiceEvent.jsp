@@ -70,29 +70,26 @@
                 </div>
 
                 <div class="panel-body">
-
                   <div class="page-header">
                     <p style="font-size:14pt; font-weight:bold;">&nbsp;&nbsp;&nbsp;이벤트</p>
                   </div>
                   <table class="table panel-default text-center">
                     <thead class="panel-heading" id='tablehead'>
-                      <tr>
-                        <td><a href="이벤트-상세내용.html">제목</a></td>
-                        <td><a href="이벤트-상세내용.html">이벤트기간</a></td>
-                        <td>당첨여부</td>
-
+                      <tr>	
+                        <td class="table-header-font">번호</td>
+                        <td class="table-header-font">점포명</td>
+                        <td class="table-header-font">이벤트제목</td>
                       </tr>
                     </thead>
                     <tbody class="panel-body">
                       <tr>
-                        <td><a href="이벤트-상세내용.html">제목</a></td>
-                        <td><a href="이벤트-상세내용.html">이벤트기간</a></td>
-                        <td>당첨여부</td>
+                        <td><a href="#">1</a></td>
+                        <td>푸드트럭1</td>
+                        <td><a href="#">푸드트럭이벤트1입니</a></td>
                         <tr>
-                          <td><a href="이벤트-상세내용.html">제목</a></td>
-                          <td><a href="이벤트-상세내용.html">이벤트기간</a></td>
-                          <td>당첨여부</td>
-
+                        <td><a href="#">1</a></td>
+                        <td>푸드트럭1</td>
+                        <td><a href="#">푸드트럭이벤트1입니</a></td>
                     </tbody>
                   </table>
 

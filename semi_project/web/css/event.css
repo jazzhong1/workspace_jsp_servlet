@@ -11,6 +11,9 @@ border-bottom: 2px solid rgba(82, 124, 27, 0.329);
 border-top: 3px solid rgba(82, 124, 27, 0.329);
 
 }
+.table-header-font{
+	color:"black";
+}
 
 #tablehead {
 background-color: rgba(206, 162, 79, 0.527);
