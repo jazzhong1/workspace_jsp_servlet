@@ -51,7 +51,7 @@
           <div class="panel-group">
 
             <div id="truckBasic" class='row'>
-       
+       			<!--ajax-->
             </div>
 
             <br>
@@ -83,11 +83,11 @@
                     </thead>
                     <tbody class="panel-body">
                       <tr>
-                        <td><a href="#">1</a></td>
+                        <td>1</td>
                         <td>푸드트럭1</td>
                         <td><a href="#">푸드트럭이벤트1입니</a></td>
                         <tr>
-                        <td><a href="#">1</a></td>
+                        <td>2</td>
                         <td>푸드트럭1</td>
                         <td><a href="#">푸드트럭이벤트1입니</a></td>
                     </tbody>
