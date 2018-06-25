@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\KH_Academy_Hong\Day_result\KH_Academy_Hong\jsp_servelt\workspace_jsp_servlet\08_HelloMVC"/>
 		<item value="C:\KH_Academy_Hong\Day_result\KH_Academy_Hong\jsp_servelt\workspace_jsp_servlet\01_javascript_ajax"/>
 		<item value="C:\KH_Academy_Hong\Day_result\KH_Academy_Hong\jsp_servelt\workspace_jsp_servlet\07_home"/>
 		<item value="C:\KH_Academy_Hong\Day_result\KH_Academy_Hong\jsp_servelt\workspace_jsp_servlet\06_HelloMVC"/>
 	</list>
+	<section name="CleanDialogSettings">
+		<item value="581" key="DIALOG_WIDTH"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
+		<item value="452" key="DIALOG_HEIGHT"/>
+		<item value="633" key="DIALOG_X_ORIGIN"/>
+		<item value="222" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="ResourceNavigator">
 		<item value="Aggregate for window 1527602084173" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
 		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>

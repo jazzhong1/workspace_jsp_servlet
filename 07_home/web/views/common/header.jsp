@@ -102,7 +102,6 @@
 			<li class="home"><a href="<%=request.getContextPath()%>/">home</a></li>
 			<li id="notice"><a href="<%=request.getContextPath()%>/noticeList">공지사항</a></li>
 			<li id="board"><a href="<%=request.getContextPath()%>/boardList">게시판</a></li>
-			<li id="photo-board"><a href="#">사진게시판</a></li>
 			<% if(memberLoggedIn!=null && memberLoggedIn.getMemberId().equals("admin")){%>
 			<li id="admin-member"><a href="<%=request.getContextPath()%>/memberList">회원관리<span class="animate_line"></span></a></li>
 			<%}%>

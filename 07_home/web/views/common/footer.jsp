@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 	</section>
 		<footer align='center'>
-			<p>&lt;CopyRight 2018.<strong>KH정보교육원</strong>All right reserved.&gt;</p>
+			<p>&lt;CopyRight 2018.<strong>성진 게시판</strong>All right reserved.&gt;</p>
 		</footer>
 	</div>
 </body>
