@@ -4973,3 +4973,9 @@ Java Model Exception: Java Model Status [[Working copy] __2F_01_5F_action_5F_tag
 
 !ENTRY org.eclipse.jface.text 2 0 2018-06-25 11:11:43.326
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-25 12:23:23.505
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-25 12:23:23.513
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

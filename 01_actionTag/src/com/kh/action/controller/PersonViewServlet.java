@@ -35,6 +35,7 @@ public class PersonViewServlet extends HttpServlet {
 		request.setAttribute("person", p);
 		request.getRequestDispatcher("views/usebean/personView.jsp").forward(request, response);		
 	}
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
