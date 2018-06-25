@@ -1,6 +1,12 @@
+CONTENT_ASSIST_BACKGROUND_COLOR=48,54,59
+CONTENT_ASSIST_FOREGROUND_COLOR=235,237,239
 content_assist_autoactivation=true
 content_assist_autoactivation_delay=0
 content_assist_autoactivation_triggers_java=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYS.
+content_assist_parameters_background=48,54,59
+content_assist_parameters_foreground=235,237,239
+content_assist_proposals_background=48,54,59
+content_assist_proposals_foreground=235,237,239
 eclipse.preferences.version=1
 fontPropagated=true
 org.eclipse.jface.textfont=1|Consolas|12.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
@@ -10,6 +16,7 @@ org.eclipse.wst.jsdt.ui.formatterprofiles.version=11
 org.eclipse.wst.jsdt.ui.javadoclocations.migrated=true
 org.eclipse.wst.jsdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
 org.eclipse.wst.jsdt.ui.text.templates_migrated=true
+overriddenByCSS=,CONTENT_ASSIST_BACKGROUND_COLOR,CONTENT_ASSIST_FOREGROUND_COLOR,content_assist_parameters_background,content_assist_parameters_foreground,content_assist_proposals_background,content_assist_proposals_foreground,
 proposalOrderMigrated=true
 sourceHoverBackgroundColor=44,49,53
 tabWidthPropagated=true
