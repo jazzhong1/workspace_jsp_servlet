@@ -4955,3 +4955,21 @@ Java Model Exception: Java Model Status [[Working copy] __2F_01_5F_action_5F_tag
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
 !SUBENTRY 1 org.eclipse.jdt.core 4 969 2018-06-25 10:52:56.114
 !MESSAGE [Working copy] __2F_01_5F_action_5F_tag_2F_WebContent_2F_index_2E_jsp.java [in <default> [in src [in 01_action_tag]]] does not exist
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-25 11:07:04.220
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-25 11:07:04.226
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-25 11:08:45.307
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-25 11:08:45.329
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-25 11:11:43.319
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-25 11:11:43.326
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
