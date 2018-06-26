@@ -5055,3 +5055,15 @@ org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://s
 !MESSAGE No repository found at https://svn.codespot.com/a/eclipselabs.org/mobile-web-development-with-phonegap/tags/r1.2/download.
 !SUBENTRY 1 org.eclipse.epp.mpc.ui 1 0 2018-06-26 09:58:32.045
 !MESSAGE AppLaud PhoneGap for Android with JSLint/JSHint 1.2
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-26 10:16:37.986
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-26 10:16:37.994
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-26 10:37:00.403
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-26 10:37:00.414
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
