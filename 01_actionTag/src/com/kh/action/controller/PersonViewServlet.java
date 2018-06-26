@@ -34,12 +34,7 @@ public class PersonViewServlet extends HttpServlet {
 		
 		request.setAttribute("person", p);
 		request.getRequestDispatcher("views/usebean/personView.jsp").forward(request, response);		
-	
-		try {
-			
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
+
 	}
 	
 
