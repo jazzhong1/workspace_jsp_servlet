@@ -28511,3 +28511,7 @@
 6월 26, 2018 10:49:56.77 [1924:8152:0626/104956.013:ERROR:in_progress_cache_impl.cc(188)] Cache is not initialized, cannot RetrieveEntry.
 6월 26, 2018 10:49:56.78 [1924:8152:0626/104956.013:ERROR:in_progress_cache_impl.cc(188)] Cache is not initialized, cannot RetrieveEntry.
 6월 26, 2018 10:49:56.79 [1924:8152:0626/104956.106:ERROR:gpu_process_transport_factory.cc(1017)] Lost UI shared context.
+6월 26, 2018 11:02:01.15 Unable to read VR Path Registry from C:\Users\jazzh\AppData\Local\openvr\openvrpaths.vrpath
+6월 26, 2018 11:02:01.17 [1924:8152:0626/110201.151:ERROR:latency_info.cc(164)] Surface::TakeLatencyInfoFromFrame, LatencyInfo vector size 101 is too big.
+6월 26, 2018 11:34:50.61 [1924:8152:0626/113450.610:ERROR:gcm_channel_status_request.cc(127)] GCM channel request failed.
+6월 26, 2018 11:43:13.50 [1924:8152:0626/114313.501:ERROR:gcm_channel_status_request.cc(127)] GCM channel request failed.
