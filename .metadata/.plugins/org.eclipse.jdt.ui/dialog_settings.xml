@@ -3,7 +3,7 @@
 	<item value="C:\KH_Academy_Hong" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="false" key="SortMembers.sort_all"/>
 	<section name="GenerateConstructorUsingFieldsSelectionDialog">
-		<item value="false" key="OmitCallToSuper"/>
+		<item value="true" key="OmitCallToSuper"/>
 	</section>
 	<section name="DialogBounds_SuperInterfaceSelectionDialog">
 		<item value="425" key="DIALOG_WIDTH"/>

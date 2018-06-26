@@ -18,7 +18,7 @@
 
 	<p>상품명세서</p>
 	<ul style="list-style: none">
-		<li>상품명(param미기재): ${pname}</li>
+		<li>상품명(param미기재): ㅍ${pname}</li>
 		<li>상품명: ${param.pname }</li>
 		<!-- 여래개값을 받을떄 param으로 출력하면 처음 값 하나만 출력 -->
 		<li>수량: ${param.pcount }</li>
