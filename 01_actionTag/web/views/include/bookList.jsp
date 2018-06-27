@@ -13,7 +13,7 @@
 	<jsp:include page='header.jsp'>
 		<jsp:param value="북리스트" name="title"/>
 	</jsp:include>
-a	
+	
 	<h2>bookList현황</h2>
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>

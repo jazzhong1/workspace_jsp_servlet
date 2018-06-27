@@ -36,6 +36,7 @@
 	timeStyle=medium : <fmt:formatDate value="${now }" type="both" timeStyle="medium"/><br>
 	timeStyle=long : <fmt:formatDate value="${now }" type="both" timeStyle="long"/><br>
 	timeStyle=full : <fmt:formatDate value="${now }" type="both" timeStyle="full"/><br>
+
 	
 	
 </body>

@@ -12,31 +12,7 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
-	<%-- <h1>c:forEach문 사용하기</h1>
-	<p>사용자가 입력한 다수의 취미를 페이지에 출력하기</p>
-	<c:forEach var="value" items="${paramValues.hobby}">
-		<c:choose>
-			<c:when test="${value=='reading' }">
-				<span>독서</span>
-			</c:when>
-			<c:when test="${value=='travel' }">
-				<span>여행</span>
-			</c:when>
-			<c:when test="${value=='excercise' }">
-				<span>운동</span>
-			</c:when>
-			<c:when test="${value=='movie' }">
-				<span>영화</span>
-			</c:when>
-			<c:when test="${value=='eat' }">
-				<span>먹방</span>
-			</c:when>
-			<c:otherwise>
-				<span>몰선택했니?</span>
-			</c:otherwise>
-		</c:choose>
-	</c:forEach>
-	<hr> --%>
+	
 	
 	<h1>c:forEach varStatus 확인하기</h1>
 	<p>varStatus는 객체로 for문에 대한 정보를 가진다.</p>
@@ -44,8 +20,6 @@
 	
 	<!-- 게시판 자료출력할떄 많이사용 다수의 데이터를 출려ㄱ할때 -->
 	<c:forEach var="value" items="${paramValues.hobby}" varStatus="s">
-	<%--<c:out value="${s.index }"/><br>
-		<c:out value="${c.count }"/><br> --%>
 		<c:if test="${s.first }">(</c:if>
 		<c:out value="${value }"/>
 		<c:if test="${not s.last}">,</c:if>
@@ -66,7 +40,7 @@
 	
 	<p>축구선수</p>
 	<ul style="list-style: none; display: inline;" >
-	<c:forEach var='palyer' items="${strs}" varStatus="s">
+	<c:forEach var='palyer' items="${player}" varStatus="s">
 		<li><c:out value="${(s.index)+1 }."/><c:out value="${palyer }"/></li>
 	</c:forEach>
 	</ul>
@@ -95,10 +69,15 @@
 	
 	<h2>forEach태그에 응용해서 처리하기!</h1>
 	<c:forEach var="val" begin="1" end="5" items="${player }" varStatus="status">
-		<h${status.index+1}>${player[status.index] }<h${status.index+1}>
+		<h${status.count}>${player[status.index] }<h${status.count}>
 	</c:forEach>
 	<hr>
-	
+
+	<h2>forEach태그 역순으로</h2>
+	<c:forEach items="${player }" var="val" begin="1" end="5" varStatus="status">
+
+ 	<c:out value="<h${6-(status.index)}>${player[status.index] }<h${6-(status.index)}>" escapeXml="false"></c:out>
+ 	</c:forEach>
 
 	
 	

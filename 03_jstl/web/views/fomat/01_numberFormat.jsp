@@ -21,7 +21,7 @@
 	
 	<!-- 천단위로 구분하지않고 출력 -->
 	천단위 없이 출력 : <fmt:formatNumber value="${numtest1 }" groupingUsed="false"/><br>	
-	<!-- 화폐단위를 출력  locaiton이라는 지역 설정에 따라서 자동으로 부여, 
+	<!-- 화폐단위(currency)를 출력  locaiton이라는 지역 설정에 따라서 자동으로 부여, 
 		 기준: 톰켓에 설정되엉있는 지역-->
 	통화(기본) : <fmt:formatNumber value="${numtest1 }" type="currency"/><br>
 	<fmt:setLocale value="ja_jp"/>
