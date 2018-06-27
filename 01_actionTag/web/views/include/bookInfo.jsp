@@ -11,7 +11,7 @@
 </head>
 <body>
 	<jsp:include page='header.jsp'>
-		<jsp:param value="신간소개" name="title"/>
+		<jsp:param value="아몰랑" name="title"/>
 	</jsp:include>
 	
 	<div id='container' style='text-align:center;'>
@@ -22,6 +22,7 @@
 		가격 : 1,000,000원<br/>	
 	</div>
 	<jsp:include page='footer.jsp'/>
+	
 <%-- <%@ include file='footer.jsp' %> --%>
 </body>
 </html>

@@ -22,6 +22,8 @@
 	<c:out value="<h1>h1태그안에서 출력</h1>" escapeXml="false"></c:out>	
 	<!-- escapeXml="false"  로 주면 태그로 사용가능하다.-->
 	
+	
+	
 	EL출력 : ${name }
 	<%request.setAttribute("name", "홍성진"); %>
 	JSTL로 EL출력 : <c:out value="${name }"/>

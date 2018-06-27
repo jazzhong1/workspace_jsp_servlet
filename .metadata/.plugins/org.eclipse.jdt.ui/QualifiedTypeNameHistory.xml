@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.net.URLEncoder"/>
-<fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="board.model.vo.BoardComment"/>
 <fullyQualifiedTypeName name="java.nio.Buffer"/>
 <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
@@ -46,7 +44,6 @@
 <fullyQualifiedTypeName name="jdk.nashorn.api.scripting.JSObject"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="javax.jws.soap.SOAPBinding.Use"/>
 <fullyQualifiedTypeName name="oracle.net.aso.p"/>
 <fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
@@ -55,9 +52,12 @@
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="com.kh.action.model.vo.Person"/>
 <fullyQualifiedTypeName name="com.kh.action.vo.Person"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.NEW"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.xalan.internal.xsltc.compiler.util.NamedMethodGenerator"/>
 <fullyQualifiedTypeName name="com.kh.el.model.vo.Person"/>
+<fullyQualifiedTypeName name="java.security.PrivilegedActionException"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.test.el.model.vo.Board"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

@@ -10,7 +10,7 @@
 <body>
 	<h2>EL파라미터 테스트</h2>
 	<ul style="list-style: none;">
-	<form action="paraEnd.jsp" method="post">
+	<form action="paraEnd.jsp" method="post">		<!-- form으로넘기는건 모두 param -->
 		<li>제품명 : <input type="text" name='pname' placeholder="제품명"></li><br>
 		<li>수량 : <input type="number" name='pconut' placeholder="수량"></li><br>
 		<li>옵션 : <input type="text" name='option' placeholder="옵션"></li><br>

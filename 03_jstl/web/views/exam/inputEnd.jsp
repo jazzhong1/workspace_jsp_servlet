@@ -11,6 +11,7 @@
 </head>
 <body>
 <ul style="list-style: none;">
+		<!-- 기본은 setAttribute로 받게된다. -->
 		<li>이름 : <c:out value="${param.name }"></c:out></li><br>
 		<li>나이 : <c:out value="${param.age }"></c:out></li><br>
   		<c:forEach items="${paramValues.fruit}" var="fruit"> 
@@ -20,9 +21,7 @@
   		<c:forEach items="${paramValues.hobby}" var="hobby"> 
   			<li>취미 : <c:out value="${hobby}"/></li>
   		</c:forEach>
-
-
-
+  		
 </ul>
 </body>
 </html>

@@ -2,6 +2,7 @@ package com.kh.el.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,7 +26,7 @@ public class ElTestServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//request.setAttribute("player", "호나우딩요");
+	/*	//request.setAttribute("player", "호나우딩요");
 		request.setAttribute("age", "40");
 		request.setAttribute("position", "MF");
 		request.getSession().setAttribute("player", "메시");
@@ -42,7 +43,25 @@ public class ElTestServlet extends HttpServlet {
 		
 		
 		request.getRequestDispatcher("/views/elParam.jsp").forward(request, response);
-	
+	*/
+		
+		request.setAttribute("no", 1);
+		request.setAttribute("title", "감스트일기");
+		request.setAttribute("price", 30000);
+		request.getSession().setAttribute("title", "오바마");
+		
+		
+		List<String>items=new ArrayList<>();
+		items.add("2");
+		items.add("곰돌이푸의 일기");
+		items.add("250000");
+		items.add("3");
+		items.add("아몰랑");
+		items.add("1000");
+		
+		request.setAttribute("items", items);
+		request.getRequestDispatcher("/views/elParam.jsp").forward(request, response);
+
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

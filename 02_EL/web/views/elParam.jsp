@@ -8,8 +8,8 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
-	<h2>서블릿에서 보낸 requset 값출력</h2>
-		축구선수 이름 : ${player}<br>
+	<%-- <h2>서블릿에서 보낸 requset 값출력</h2>
+		축구선수 이름 : ${player}<br>	<!-- 세션 -->
 		축구선수 이름 : <%=request.getAttribute("player") %><br>
 		<!--  page부터 세션~이런식으로 찾아가기떄문에 우선순위가 낮다.-->
 		축구선수 나이 : ${age}<br>
@@ -24,7 +24,18 @@
 								<!-- vo에 getter를 가져옴 -->		
 	<h2>객체 출력하기</h2>	
 		
-		
+		 --%>
+		 
+	<h1>home복습  object</h1>
+	<ul style="list-style: none">
+		<li>번호: ${no}</li>
+		<li>제목 : ${title }</li>
+		<li>가격 : ${price }</li>
+	</ul>
+	
+	<p>${items}</p>
+	
+	
 				
 </body>
 </html>

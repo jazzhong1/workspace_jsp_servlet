@@ -11,9 +11,7 @@
 </head>
 <body>
 	<c:out value="${board}"/>
-	
 	<c:set var="p" value="${board}"/>
-	<c:set target="p">
 	
 </body>
 </html>
