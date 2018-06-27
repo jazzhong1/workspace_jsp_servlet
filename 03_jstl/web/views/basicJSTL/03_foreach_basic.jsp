@@ -54,8 +54,8 @@
 	
 	
 	
-	<%String[] strs={"토니크로스","외질","케디라","베르너","훔멜스","보아텡"};
-		request.setAttribute("strs", strs);
+	<%String[] player={"토니크로스","외질","케디라","베르너","훔멜스","보아텡"};
+		request.setAttribute("player", player);
 		List<Member> list=new ArrayList();
 		list.add(new Member("홍성진",12,"포도","농구"));
 		list.add(new Member("감스트",42,"딸기","축구"));
@@ -74,12 +74,33 @@
 	
 	<p>member<p>
 	<ul style="list-style: none; display: inline;" >
-	<c:forEach var='member' items="${list}" varStatus="s">
-		<li><c:out value="번호 :${(s.index)+1 } "/>M<c:out value="이름 :${member.name } 나이: ${member.age }"/></li>
+	<c:forEach var='member' items="${list}" varStatus="status">
+		<li><c:out value="번호 :${(status.index)+1 } "/>
+		<c:out value="이름 :${member.name } 나이: ${member.age }"/></li>
 	</c:forEach>
 	</ul>
 	<hr>
 	
+	<h2>c:forEach begin/end를 활용하기<h2>
+	<p>begin하고 end forEach문의 시작과 끝을 의미한다고 볼수있다.</p>
+	<h3>반복값을 하나씩출력하기</h3>
+	<!-- 역순으로는 안됨... -->
+	<ul style="list-style: none; display: inline;">
+		<c:forEach var='cnt' varStatus="status" begin="5" end="10">
+		<li><c:out value="번호 :${status.index } "/></li>
+		<li><c:out value="번호 :${cnt} "/></li>
+	</c:forEach>
+	</ul>
+	<hr>
+	
+	<h2>forEach태그에 응용해서 처리하기!</h1>
+	<c:forEach var="val" begin="1" end="5" items="${player }" varStatus="status">
+		<h${status.index+1}>${player[status.index] }<h${status.index+1}>
+	</c:forEach>
+	<hr>
+	
+	<h2>forTokens</h2>
+	<p>문자열에 포함된 구분자를 통해 토큰을 분리해서 반복처리</p>	
 	
 	
 	
