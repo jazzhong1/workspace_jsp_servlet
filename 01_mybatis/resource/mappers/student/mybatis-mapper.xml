@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!-- namespace는 DAO에서 mapper를 호출한 명칭 -->
+<mapper namespace="mybatis">
+<!-- 	
+      활용할 SQL구문이 태그형식에 
+	맞게(<select>,<insert>,<update>등) 작성하면됨
+	 
+	각 태그의 id속성 값은 해당 태그를 불러오는 구분자가 됨.
+	-->	
+  <insert id='test1'>
+  	insert into student values(seq_student.nextval,'장현수','012345678','jang@iei.or.kr','서울시 종로구',default)
+  </insert>
+  
+    <insert id='test2' parameterType="string">
+  	insert into student values(seq_student.nextval,#{tt},'01051570465','sdggeeewerr','서울시 종로구',default)
+  </insert>
+   
+    
+    <insert id='test3' parameterType="com.kh.mybatis.model.vo.Student">
+  	insert into student values(seq_student.nextval,#{studentName},#{studentTel},#{studentEmail},#{studentAddr},default)
+  </insert>
+    
+</mapper>

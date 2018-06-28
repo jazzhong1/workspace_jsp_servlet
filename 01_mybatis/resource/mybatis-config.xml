@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+	<!-- 데이터베이스 커넥션정보설정 -->
+	<environments default="development">
+		<environment id="development">
+			<!-- 트랜젝션처리 설정 -->
+			<transactionManager type="JDBC"/>
+			<!-- DB정보설정(datasource) 
+				property name값은 지정된 값으로 변경되면 안됨!
+			-->
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
+				<property name="url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+				<property name="username" value="mybatis"/>
+				<property name="password" value="mybatis"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<!-- slq구문이 들어가있는 mapper.xml파일과 연결시켜주는 설정 
+		 config파일을 읽어 올때 mapper에 대한 파일이 있는지 확인하고 
+		 처리하기때문에 지정된 경로에 없는 파일이 있는 경우 
+		 에러를 발생시킴 주의! 파일이 없는 mapper는 주석이나 삭제 할것 
+	-->
+	<mappers>
+		<mapper resource="/mappers/student/mybatis-mapper.xml"/>
+		<!-- <mapper resource="/mappers/student/student-mapper.xml"/> -->
+	</mappers>
+
+</configuration>
+
+
+
+
+
+
+
+
+
+
