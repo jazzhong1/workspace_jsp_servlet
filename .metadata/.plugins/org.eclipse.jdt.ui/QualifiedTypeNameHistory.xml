@@ -1,26 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="board.model.vo.BoardComment"/>
-<fullyQualifiedTypeName name="java.nio.Buffer"/>
-<fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
-<fullyQualifiedTypeName name="java.io.InputStream"/>
-<fullyQualifiedTypeName name="java.io.FileInputStream"/>
-<fullyQualifiedTypeName name="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"/>
-<fullyQualifiedTypeName name="notice.model.service.NoticeService"/>
-<fullyQualifiedTypeName name="org.apache.tomcat.dbcp.dbcp2.cpdsadapter.PStmtKeyCPDS"/>
-<fullyQualifiedTypeName name="java.net.ConnectException"/>
-<fullyQualifiedTypeName name="common.JDBCTemplate"/>
-<fullyQualifiedTypeName name="javafx.scene.layout.Pane"/>
-<fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.HTMLReader.ParagraphAction"/>
-<fullyQualifiedTypeName name="org.omg.PortableServer.LIFESPAN_POLICY_ID"/>
-<fullyQualifiedTypeName name="java.sql.Array"/>
-<fullyQualifiedTypeName name="ajax.User"/>
-<fullyQualifiedTypeName name="ajax.model.dao.AjaxDao"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="java.lang.Class"/>
-<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-<fullyQualifiedTypeName name="com.sun.crypto.provider.RSACipher"/>
-<fullyQualifiedTypeName name="board.model.dao.BoardDao"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="com.sun.xml.internal.bind.v2.runtime.Name"/>
 <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicScrollPaneUI.HSBChangeListener"/>
@@ -56,8 +35,29 @@
 <fullyQualifiedTypeName name="com.sun.org.apache.xalan.internal.xsltc.compiler.util.NamedMethodGenerator"/>
 <fullyQualifiedTypeName name="com.kh.el.model.vo.Person"/>
 <fullyQualifiedTypeName name="java.security.PrivilegedActionException"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.test.el.model.vo.Board"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.hk.mybaties.controller.MybatiesTestServelt"/>
+<fullyQualifiedTypeName name="com.hk.mybaties.model.service.MybatiesService"/>
+<fullyQualifiedTypeName name="com.kh.mybaties.model.service.MybatiesService"/>
+<fullyQualifiedTypeName name="oracle.net.aso.s"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.io.Resources"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
+<fullyQualifiedTypeName name="com.kh.mybaties.model.service.MybatiesServiceImpl"/>
+<fullyQualifiedTypeName name="com.kh.mybaties.model.dao.MybatiesDAO"/>
+<fullyQualifiedTypeName name="com.kh.mybaties.model.dao.MybatiesDAOImpl"/>
+<fullyQualifiedTypeName name="org.omg.CosNaming.NamingContextExtPackage.StringNameHelper"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.annotations.Insert"/>
+<fullyQualifiedTypeName name="com.kh.mybatis.model.service.StudentService"/>
+<fullyQualifiedTypeName name="com.kh.mybatis.model.dao.StudentDAO"/>
+<fullyQualifiedTypeName name="com.kh.mybatis.model.dao.StudentDAOImpl"/>
+<fullyQualifiedTypeName name="com.kh.mybatis.model.dao.MybatisDAO"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+<fullyQualifiedTypeName name="com.kh.mybatis.model.service.MybatisService"/>
+<fullyQualifiedTypeName name="com.kh.mybatis.model.service.MybatisServiceImpl"/>
+<fullyQualifiedTypeName name="com.kh.mybatis.model.vo.Student"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <modules>
   <module moduleId="org.eclipse.jst.jee.server:01_mybatis" serverId="hong"/>
+  <module moduleId="org.eclipse.jst.jee.server:01_mybatis_home" serverId="hong"/>
   <module moduleId="org.eclipse.jst.jee.server:02_EL" serverId="hong"/>
   <module moduleId="org.eclipse.jst.jee.server:03_jstl" serverId="hong"/>
   <module moduleId="org.eclipse.jst.jee.server:01_actionTag" serverId="hong"/>

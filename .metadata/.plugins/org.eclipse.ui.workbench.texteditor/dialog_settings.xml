@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="692" key="DIALOG_X_ORIGIN"/>
+		<item value="362" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.jst.jsp.ui.internal.preferences.ui.JSPTemplatePreferencePage$JSPEditTemplateDialog_dialogBounds">
 		<item value="1417" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 		<item value="988" key="DIALOG_HEIGHT"/>
-		<item value="518" key="DIALOG_X_ORIGIN"/>
-		<item value="40" key="DIALOG_Y_ORIGIN"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="-156" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="수정" key="selection"/>
+		<item value="java" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="java"/>
 			<item value="수정"/>
 			<item value="food"/>
 			<item value="$"/>
@@ -20,7 +25,6 @@
 			<item value="flag"/>
 			<item value="boardComment"/>
 			<item value="hi"/>
-			<item value="tbl-notice"/>
 		</list>
 		<list key="replacehistory">
 		</list>

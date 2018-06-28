@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\KH_Academy_Hong\Day_result\KH_Academy_Hong\jsp_servelt\workspace_jsp_servlet\01_mybatis"/>
 		<item value="C:\KH_Academy_Hong\Day_result\KH_Academy_Hong\jsp_servelt\workspace_jsp_servlet\01_actionTag"/>
 		<item value="C:\KH_Academy_Hong\Day_result\KH_Academy_Hong\jsp_servelt\workspace_jsp_servlet\08_HelloMVC"/>
 		<item value="C:\KH_Academy_Hong\Day_result\KH_Academy_Hong\jsp_servelt\workspace_jsp_servlet\01_javascript_ajax"/>
@@ -9,7 +10,7 @@
 	</list>
 	<section name="CleanDialogSettings">
 		<item value="581" key="DIALOG_WIDTH"/>
-		<item value="false" key="TOGGLE_SELECTED"/>
+		<item value="true" key="TOGGLE_SELECTED"/>
 		<item value="452" key="DIALOG_HEIGHT"/>
 		<item value="633" key="DIALOG_X_ORIGIN"/>
 		<item value="222" key="DIALOG_Y_ORIGIN"/>
