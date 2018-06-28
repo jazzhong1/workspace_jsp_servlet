@@ -6,6 +6,7 @@ public interface MybatisService {
 	
 	int insertStudent(Student student);
 	int insertName(String name);
+	int insertStudent();
 	
 	
 }

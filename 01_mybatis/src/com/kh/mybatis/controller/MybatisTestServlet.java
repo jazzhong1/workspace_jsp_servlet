@@ -1,5 +1,5 @@
-package com.kh.mybatis.controller;
 
+package com.kh.mybatis.controller;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -32,7 +32,7 @@ public class MybatisTestServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		int result=mybatisService.insertName(name)
+		int result=mybatisService.insertStudent();
 		String test=result>0?"테스트성공(입력!)":"테스트실패!(입력실패)";
 		
 		response.setContentType("text/html;charset=UTF-8");

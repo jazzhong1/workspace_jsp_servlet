@@ -82,6 +82,22 @@ public class MybatisServiceImpl implements MybatisService {
 		return result;
 	}
 
+
+	@Override
+	public int insertStudent() {
+		SqlSession session=getSession(); 
+		int result=mybatisDAO.insertStudent(session);
+		if(result>0)
+			session.commit();
+		else
+			session.rollback();
+		
+		//연결객체 반환!
+		session.close();
+		
+		return result;
+	}
+
 }
 
 
