@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis">
+  
+  <insert id='insertStudent' parameterType="com.hong.mybatis.model.vo.Student">
+  	insert into student values(seq_student.nextval,#{studentName},#{studentTel},#{studentEmail},#{studentAddr},default)
+  </insert>
+  <insert id="insertStudentMap1" parameterType="hashmap">
+  	insert into student values(seq_student.nextval,#{studentName},#{studentTel},#{studentEmail},#{studentAddr},default)
+  </insert>
+   <insert id="insertStudentMap2" parameterType="hashmap">
+  	insert into student values(seq_student.nextval,#{student.studentName},#{student.studentTel},#{student.studentEmail},#{student.studentAddr},default)
+  </insert>
+  
+  <select id="selectStudent" resultType="com.hong.mybatis.model.vo.Student" parameterType="string">
+  	select 
+		student_no as studentNo,
+		student_name as studentName,
+		student_tel as studentTel,
+		student_email as studentEmail,
+		student_addr as studentAddr,
+		reg_date as reg_date
+  		from student where student_no=#{no}
+  </select>
+</mapper>

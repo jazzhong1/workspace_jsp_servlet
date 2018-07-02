@@ -46,6 +46,7 @@
 			action="${pageContext.request.contextPath}/studentEnrollEnd.do"
 			method="post">
 			<table id="tbl-student">
+			<input type="hidden" name='map' value='${map }'/>
 				<tr>
 					<th>학생이름</th>
 					<td><input type="text" name="studentName" required /></td>
@@ -62,6 +63,13 @@
 					<th>주소</th>
 					<td><input type="text" name="studentAddr" /></td>
 				</tr>
+				
+				<!-- <tr>
+					<th>check</th>
+					<td><input type="time" name="time" /></td>
+				</tr> -->
+				
+				
 				<tr>
 					<td colspan="2"><input type="submit" value="등록" /></td>
 				</tr>

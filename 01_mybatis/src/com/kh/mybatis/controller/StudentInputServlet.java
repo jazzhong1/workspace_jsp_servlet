@@ -26,7 +26,11 @@ public class StudentInputServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String flag=request.getParameter("map");
+		request.setAttribute("map", flag);
 		request.getRequestDispatcher("/WEB-INF/views/student/studentForm.jsp").forward(request, response);;
+
+	
 	}
 
 	/**

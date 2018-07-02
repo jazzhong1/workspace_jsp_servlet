@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+	<!-- 데이터베이스 커넥션 정보설정 -->
+		<!-- 트랜잭션처리 -->
+		<!-- DB정보 설정(datasource-->
+		
+	<environments default="developement">
+		<environment id="developement">
+		<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
+				<property name="url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+				<property name="username" value="mybatis"/>
+				<property name="password" value="mybatis"/>	
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<!-- sql문구가 들어있는 mapperxml과 연결시켜준다.
+		config파일을 읽어올떄 mapper에 대한 파일이 있는지 확인하고 처리해야하기때문에
+		없는파일은 삭제한다 -->
+	<mappers>
+		<mapper resource="/mapper/student/mybatis-mapper.xml"/>
+	</mappers>
+	
+</configuration>

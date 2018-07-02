@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <!-- namespace는 DAO에서 mapper를 호출한 명칭 -->
-<mapper namespace="mybatis">
+<mapper namespace="mybatis">	<!-- root태그가 됨!  namespace는 mapper 이름이 됨. -->
 <!-- 	
       활용할 SQL구문이 태그형식에 
 	맞게(<select>,<insert>,<update>등) 작성하면됨
@@ -18,7 +18,33 @@
    
     
     <insert id='test3' parameterType="com.kh.mybatis.model.vo.Student">
+    							<!--경로를 구체적으로 package명까지 적어줘야한다.  -->
   	insert into student values(seq_student.nextval,#{studentName},#{studentTel},#{studentEmail},#{studentAddr},default)
   </insert>
+  
+  <insert id='test4' parameterType="hashmap">
+    							<!--경로를 구체적으로 package명까지 적어줘야한다.  -->
+  	insert into student values(seq_student.nextval,#{studentName},#{studentTel},#{studentEmail},#{studentAddr},default)
+  </insert>
+  
+  <insert id='test5' parameterType="hashmap">
+    <!--경로를 구체적으로 package명까지 적어줘야한다.  -->
+  	insert into student values(seq_student.nextval,#{student.studentName},#{student.studentTel},#{student.studentEmail},#{student.studentAddr},default)
+  </insert>
+  <!-- select 는 무조건 resultType를 써줘야한다. -->
+  <select id="test6" parameterType="_int" resultType='com.kh.mybatis.model.vo.Student'>
+  	select 
+		student_no as studentNo,
+		student_name as studentName,
+		student_tel as studentTel,
+		student_email as studentEmail,
+		student_addr as studentAddr,
+		reg_date as reg_date
+	from student where student_no=#{no}
+  </select>
+  <select id="test7">
+  	select count(*) as cnt from student
+  </select>
     
 </mapper>
+ 
