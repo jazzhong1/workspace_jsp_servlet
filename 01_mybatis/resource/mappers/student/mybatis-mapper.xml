@@ -42,7 +42,7 @@
 		reg_date as reg_date
 	from student where student_no=#{no}
   </select>
-  <select id="test7">
+  <select id="test7" resultType='_int'>	
   	select count(*) as cnt from student
   </select>
     

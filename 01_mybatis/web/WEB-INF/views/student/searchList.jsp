@@ -14,6 +14,7 @@
 </head>
 <body>
 	<h2>검색결과</h2>
+	<h3>학생수 : <c:out value="${requestScope.cnt }"/> </h3>
 	<table>
 		<tr>
 			<th>학생번호</th>

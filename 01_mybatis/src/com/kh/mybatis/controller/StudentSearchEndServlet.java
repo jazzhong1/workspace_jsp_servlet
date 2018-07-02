@@ -34,8 +34,8 @@ public class StudentSearchEndServlet extends HttpServlet {
 		Student student=mybatisService.selectOne(no);
 		int cnt=mybatisService.selectCount();
 		System.out.println(student);
-		System.out.println(cnt);
 		request.setAttribute("student", student);
+		request.setAttribute("cnt", cnt);
 		request.getRequestDispatcher("/WEB-INF/views/student/searchList.jsp").forward(request, response);
 	}
 

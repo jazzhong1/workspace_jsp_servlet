@@ -19,6 +19,7 @@
 	<a href='${path }/studentInput.do?map=1'>학생입력(map)</a><br>
 	<a href='${path }/studentInput.do?map=2'>학생입력(map,객체)</a><br>
 	<a href='${path }/studentSearch.do'>학생조회</a><br>
+	<a href='${path }/studentDelete.do'>하생삭제</a><br>
 </body>
 </html>
 

@@ -48,8 +48,8 @@ public class MybatisDAOImpl implements MybatisDAO {
 		    		result=session.insert("mybatis.test4",map);
 		        }
 		 }
-		 /*
-			Set<Map.Entry<String,Object>> set=map.entrySet();
+		 
+		/*	Set<Map.Entry<String,Object>> set=map.entrySet();
 			Iterator it=set.iterator();
 			while(it.hasNext())
 			{
