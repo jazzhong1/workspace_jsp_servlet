@@ -5,6 +5,12 @@
 		<!-- 트랜잭션처리 -->
 		<!-- DB정보 설정(datasource-->
 		
+		<typeAliases>
+			<typeAlias alias="student" type="com.hong.mybatis.model.vo.Student"/>
+		</typeAliases>
+		
+		
+		
 	<environments default="developement">
 		<environment id="developement">
 		<transactionManager type="JDBC"/>

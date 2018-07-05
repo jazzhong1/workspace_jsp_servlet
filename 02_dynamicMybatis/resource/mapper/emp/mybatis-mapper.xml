@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="emp">
+	
+	 <resultMap type="map" id="empMap">
+		<!-- <result column='emp_id' property="emp_id" javaType="string"/>
+		<result column='emp_name' property="emp_name" javaType="string"/>
+		<result column='emp_no' property="emp_no" javaType="string"/>
+		<result column='email' property="email" javaType="string"/>
+		<result column='phone' property="phone" javaType="string"/>
+		<result column='dept_code' property="dept_code" javaType="string"/>
+		<result column='job_code' property="job_code" javaType="string"/>
+		<result column='sal_level' property="sal_level" javaType="string"/>
+		<result column='salary' property="salary" javaType="_int"/>
+		<result column='bonus' property="bonus" javaType="double"/>
+		<result column='manager_id' property="manager_id" javaType="string"/>
+		<result column='hire_date' property="hire_date" javaType="date"/> -->
+	</resultMap> 
+		
+	<select id="selectAll" resultMap="empMap">
+		select * from kh.employee
+	</select>
+	
+	<!-- 파라미터로 전송된 객체는 #{} 값을넣었는데
+	#{} : 파라미터의 자료형에 따라 형식에 맞춰서 대입!
+	 예) 문자형 : '파라미터' / 숫자 : 파라미터
+	${} : 파라미터값을 자료형에 상관없이 그냥 그대로 출력! -->
+	 
+	<select id="searchCol" resultMap="empMap">
+		select * from kh.employee 
+		where ${searchType} like '%'||#{keyword}||'%'	
+	</select>
+	<!-- if문을 사용한 동적쿼리 작성 -->
+	<select id="searchCol2" resultMap="empMap">
+		select * from (select A.*, 
+		decode(substr(emp_no,8,1),1,'남',3,'남',2,'여',4,'여') 
+		as gender
+		from kh.employee A) A where 1=1	
+		<!-- 앞에 바로 if로 떨어질수 없기때문에  -->
+		 <if test="searchType != null and searchType != ''">
+			and ${searchType} like '%'||#{keyword}||'%'
+		</if>	
+		
+		<if test="gender != null and gender != ''">
+			and gender=#{gender}
+		</if> 
+		
+		<!-- swich문이랑 동일 둘중 하나만 실행~!  -->
+		<if test="salary!='' and salary!=null">
+		<choose>
+			<when test="salary_le_ge eq 'le'">	<!-- 이하 -->
+				and salary <![CDATA[<=]]>#{salary} order by salary
+			</when>
+			<when test="salary_le_ge eq 'ge'"> <!-- 이상 -->
+				and salary <![CDATA[>=]]>#{salary} order by salary
+			</when>
+			<otherwise>
+				and salary=salary order by salary
+			</otherwise>
+		</choose>
+		</if>
+		
+		<if test="hire_date!='' and hire_date!=null">
+		<choose>
+			<when test="hire_date_le_ge eq 'le'">	<!-- 이하 -->
+				and hire_date <![CDATA[<=]]>#{hire_date} order by hire_date
+			</when>
+			<when test="hire_date_le_ge eq 'ge'"> <!-- 이상 -->
+				and hire_date <![CDATA[>=]]>#{hire_date} order by hire_date
+			</when>
+		</choose>
+		</if>
+		
+			<!-- <choose>
+		<when test="searchType !=null and searchType !=''">
+			and ${searchType} like '%' || #{keyword} || '%'
+		</when>
+		<when test="keyword !=null and keyword !=''">
+			and gender=#{gender}
+		</when>
+	</choose> -->
+	
+		<!-- <if test="searchType != null and searchType != ''">
+			and ${searchType} like '%'||#{keyword}||'%'
+		</if>	
+		
+		<if test="gender != null and gender != ''">
+			and gender=#{gender}
+		</if> -->
+		
+	</select>
+	
+	<select id='searchArr' resultMap='empMap'>
+		select A.*, B.job_name, C.dept_id
+		from kh.employee A
+		left join kh.job B on(A.job_code=B.job_code)
+		left join kh.department C on(dept_code=dept_id)
+		where 1=1
+<!-- 	마이바티스 foreach
+		속성
+		1. collection : 반복할 객체 (예 job_code)
+		2. item : 객체의 데이터가 들어갈 변수
+		3. index : 반복횟수
+		4. open : 시작문자
+		5. close : 끝낼문자
+		6. separator : 구분자
+		DB에서 중복값을 다중행 비교! in 다음에 들어갈 구문을 작성
+		(값,값,값,값) -->
+		<if test="job_code!=''and job_code!=null">
+			and A.job_code in
+			<foreach collection="job_code" item="job" index="i"
+			open="(" close=")" separator=",">
+			#{job}
+			</foreach>
+			order by A.job_code
+		</if>
+	</select>
+	
+	<select id="page" resultMap="empMap">
+		select * from kh.employee
+	</select>
+	
+	<select id="count" resultType="_int">
+		select count(*) from kh.employee
+	</select>
+
+	
+  
+</mapper>
+
+
+
+
+
+

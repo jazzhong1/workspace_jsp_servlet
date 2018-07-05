@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+
+	<!-- dataSoruce를 설정하는 방법은 3가지 
+		1.직접 내용작성
+		2.properties파일을 이용하여 불러와 사용		
+		3.properties 파일 이용하여 사ㅛㅇ함. 만약 없으면 default 설정
+	-->
+	<properties resource="/driver.properties"/>
+	<environments default="development">	<!-- default 는 environment 에 id로 대입한다. -->
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}"/>
+				<property name="url" value="${url}"/>
+				<property name="username" value="${user}"/>
+				<property name="password" value="${pw}"/>
+			</dataSource>
+		</environment>
+	</environments>	
+<mappers>
+	<mapper resource="/mapper/emp/mybatis-mapper.xml"/>
+</mappers>
+
+</configuration>
+
+

@@ -2,6 +2,8 @@
 <modules>
   <module moduleId="org.eclipse.jst.jee.server:01_mybatis" serverId="hong"/>
   <module moduleId="org.eclipse.jst.jee.server:01_mybatis_home" serverId="hong"/>
+  <module moduleId="org.eclipse.jst.jee.server:02_dynamicMybatis" serverId="hong"/>
+  <module moduleId="org.eclipse.jst.jee.server:02_dynamicMybatisHome" serverId="hong"/>
   <module moduleId="org.eclipse.jst.jee.server:02_EL" serverId="hong"/>
   <module moduleId="org.eclipse.jst.jee.server:03_jstl" serverId="hong"/>
   <module moduleId="org.eclipse.jst.jee.server:01_actionTag" serverId="hong"/>

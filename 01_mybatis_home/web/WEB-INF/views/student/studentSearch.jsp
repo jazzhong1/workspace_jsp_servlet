@@ -27,26 +27,44 @@
 <body>
 	<div id='student-container'>
 		<h2>학생정보 검색</h2>
-		<form action="${pageContext.request.contextPath }/studentSelectOne.do">
 			<table id='tbl-student'>
 				<tr>
-					<th>학생번호</th>
-					<td><input type="number" name='no' required/></td>
+					<th>학생이름</th>
+					<td><input  type="number" name='name' required/></td>
 				</tr>
 				<tr>
 					<td colspan='2'>
-						<input type='submit' value='검색'/>
+						<input type="button" onclick="fn_sendData()" value='검색'/>
 					</td>
 				</tr>				
 			</table>
-		</form>
+		<div style="text-align: left;">
+			<table id='tbl-ajax' style="display: none;">
+			
+			</table>
+		</div>
 	</div>
 </body>
 </html>
-
-
-
-
-
-
+ 
+<script type="text/javascript">
+	function fn_sendDate() {
+		$.ajax({
+			url:"${pageContext.request.contextPath}/studentSearchEnd.do",
+			data: {name:$('input[name=name]').val()},
+			type:'get',
+			dataType:'json',
+			success : function(data) {
+				var html='<tr><td>'
+			}
+		})
+	}
 	
+		
+</script>
+
+
+
+
+
+

@@ -1,50 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <!-- namespace는 DAO에서 mapper를 호출한 명칭 -->
-<mapper namespace="mybatis">	<!-- root태그가 됨!  namespace는 mapper 이름이 됨. -->
-<!-- 	
-      활용할 SQL구문이 태그형식에 
-	맞게(<select>,<insert>,<update>등) 작성하면됨
-	 
-	각 태그의 id속성 값은 해당 태그를 불러오는 구분자가 됨.
-	-->	
-  <insert id='test1'>
-  	insert into student values(seq_student.nextval,'장현수','012345678','jang@iei.or.kr','서울시 종로구',default)
-  </insert>
-  
-    <insert id='test2' parameterType="string">
-  	insert into student values(seq_student.nextval,#{tt},'01051570465','sdggeeewerr','서울시 종로구',default)
-  </insert>
-   
-    
-    <insert id='test3' parameterType="com.kh.mybatis.model.vo.Student">
-    							<!--경로를 구체적으로 package명까지 적어줘야한다.  -->
-  	insert into student values(seq_student.nextval,#{studentName},#{studentTel},#{studentEmail},#{studentAddr},default)
-  </insert>
-  
-  <insert id='test4' parameterType="hashmap">
-    							<!--경로를 구체적으로 package명까지 적어줘야한다.  -->
-  	insert into student values(seq_student.nextval,#{studentName},#{studentTel},#{studentEmail},#{studentAddr},default)
-  </insert>
-  
-  <insert id='test5' parameterType="hashmap">
-    <!--경로를 구체적으로 package명까지 적어줘야한다.  -->
-  	insert into student values(seq_student.nextval,#{student.studentName},#{student.studentTel},#{student.studentEmail},#{student.studentAddr},default)
-  </insert>
-  <!-- select 는 무조건 resultType를 써줘야한다. -->
-  <select id="test6" parameterType="_int" resultType='com.kh.mybatis.model.vo.Student'>
-  	select 
-		student_no as studentNo,
-		student_name as studentName,
-		student_tel as studentTel,
-		student_email as studentEmail,
-		student_addr as studentAddr,
-		reg_date as reg_date
-	from student where student_no=#{no}
-  </select>
-  <select id="test7" resultType='_int'>	
-  	select count(*) as cnt from student
-  </select>
-    
+<mapper namespace="mybatis">	<!-- root태그가 됨! namespace는 mapper 이름이 됨. -->
+	<!-- 활용할 SQL구문이 태그형식에 맞게(<select>,<insert>,<update>등) 작성하면됨 각 태그의 id속성 값은 
+		해당 태그를 불러오는 구분자가 됨. -->
+		
+	<!-- resultmap을 이용해서 처리할 수 있음 -->
+	<resultMap type="student" id="selectOne_">		<!-- * 을 만들어준다 라고 볼수있음  -->
+	<!-- resultMap은 colum에 vo를 넣어서 매핑해준다 라고 볼수있다. -->
+		<result column="student_no" property="studentNo" />
+		<result column="student_name" property="studentName" />
+		<result column="student_tel" property="studentTel" />
+		<result column="student_email" property="studentEmail" />
+		<result column="student_addr" property="studentAddr" />
+		<result column="reg_date" property="reg_date" />
+	</resultMap>
+	<!-- DB컬럼겨로가 vo객체의 멤버변수명이 동일할 경우 result태그를 사용히자 않아도 자동으로 mapping처리함 -->	
+		
+	<resultMap type="map" id="selectMap">
+		<result column="student_no" property="studentNo"/>
+		<result column="student_name" property="studentName" />
+		<result column="student_tel" property="studentTel" />
+		<result column="student_email" property="studentEmail" />
+		<result column="student_addr" property="studentAddr" />
+		<result column="reg_date" property="reg_date" />
+	</resultMap>	
+		
+		
+	<insert id='test1'>
+		insert into student
+		values(seq_student.nextval,'장현수','012345678','jang@iei.or.kr','서울시
+		종로구',default)
+	</insert>
+
+	<insert id='test2' parameterType="string">
+		insert into student
+		values(seq_student.nextval,#{tt},'01051570465','sdggeeewerr','서울시
+		종로구',default)
+	</insert>
+
+
+	<insert id='test3' parameterType="com.kh.mybatis.model.vo.Student">
+		<!--경로를 구체적으로 package명까지 적어줘야한다. -->
+		insert into student
+		values(seq_student.nextval,#{studentName},#{studentTel},#{studentEmail},#{studentAddr},default)
+	</insert>
+
+	<insert id='test4' parameterType="hashmap">
+		<!--경로를 구체적으로 package명까지 적어줘야한다. -->
+		insert into student
+		values(seq_student.nextval,#{studentName},#{studentTel},#{studentEmail},#{studentAddr},default)
+	</insert>
+
+	<insert id='test5' parameterType="hashmap">
+		<!--경로를 구체적으로 package명까지 적어줘야한다. -->
+		insert into student
+		values(seq_student.nextval,#{student.studentName},#{student.studentTel},#{student.studentEmail},#{student.studentAddr},default)
+	</insert>
+	<!-- select 는 무조건 resultType를 써줘야한다. -->
+	<select id="test6" parameterType="_int" resultMap="selectOne_">
+		select * from student where student_no=#{no}
+	</select>
+	
+	
+
+	<select id="test7" resultType='_int'>
+		select count(*) as cnt from student
+	</select>
+	<delete id="test8" parameterType="_int">
+		delete from student where student_no=#{no}
+	</delete>
+	
+	<select id="list1" resultMap="selectOne_">		<!-- 자동으로 간다~ -->
+		select * from student order by reg_date desc
+	</select>
+	
+		<select id="list2" parameterType="string" resultMap="selectOne_">		<!-- 자동으로 간다~ -->
+		select * from student where student_name like '%' ||  #{name} || '%' 
+	</select>
+	
+	<select id="list3" resultMap="selectMap">
+		select * from student order by reg_date desc
+	</select>
+	
+
 </mapper>
  

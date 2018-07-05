@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="mybatis">
+ <!-- 활용할 SQL구문이 태그형식에 맞게(<select>,<insert>,<update>등) 작성하면됨 각 태그의 id속성 값은 
+		해당 태그를 불러오는 구분자가 됨. -->
+		
+	<!-- resultmap을 이용해서 처리할 수 있음 -->
+ 
+  <!-- resultmap을 이용해서 처리할 수 있음 -->
+	<resultMap type="student" id="student">		<!-- * 을 만들어준다 라고 볼수있음  -->
+	<!-- resultMap은 colum에 vo를 넣어서 매핑해준다 라고 볼수있다. -->
+		<result column="student_no" property="studentNo" />
+		<result column="student_name" property="studentName" />
+		<result column="student_tel" property="studentTel" />
+		<result column="student_email" property="studentEmail" />
+		<result column="student_addr" property="studentAddr" />
+		<result column="reg_date" property="reg_date" />
+	</resultMap>
+	<!-- DB컬럼겨로가 vo객체의 멤버변수명이 동일할 경우 result태그를 사용히자 않아도 자동으로 mapping처리함 -->	
+	
   
   <insert id='insertStudent' parameterType="com.hong.mybatis.model.vo.Student">
   	insert into student values(seq_student.nextval,#{studentName},#{studentTel},#{studentEmail},#{studentAddr},default)
@@ -12,14 +29,20 @@
   	insert into student values(seq_student.nextval,#{student.studentName},#{student.studentTel},#{student.studentEmail},#{student.studentAddr},default)
   </insert>
   
-  <select id="selectStudent" resultType="com.hong.mybatis.model.vo.Student" parameterType="string">
-  	select 
-		student_no as studentNo,
-		student_name as studentName,
-		student_tel as studentTel,
-		student_email as studentEmail,
-		student_addr as studentAddr,
+   <select id="selectStudent" resultMap="student" parameterType="string">
+  	select *
 		reg_date as reg_date
   		from student where student_no=#{no}
+  </select> 
+  <delete id="deleteStudent" parameterType="_int">
+  	delete from student where student_no=#{no}
+  </delete>
+ 
+  <select id="selectList" resultMap="student">
+  	select * from student order by reg_date desc
   </select>
+  <select id="selectList2" resultMap="student">
+  	select * from student where student_name like '%'||#{name}||'%' order by reg_date desc
+  </select>
+  
 </mapper>

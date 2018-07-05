@@ -1,15 +1,21 @@
 package com.kh.mybatis.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.gson.Gson;
 import com.kh.mybatis.model.service.MybatisService;
 import com.kh.mybatis.model.service.MybatisServiceImpl;
 import com.kh.mybatis.model.vo.Student;
+
 
 /**
  * Servlet implementation class StudentSearchEndServlet
@@ -33,10 +39,14 @@ public class StudentSearchEndServlet extends HttpServlet {
 		int no=Integer.parseInt(request.getParameter("no"));
 		Student student=mybatisService.selectOne(no);
 		int cnt=mybatisService.selectCount();
-		System.out.println(student);
+		//System.out.println(student);
+		
 		request.setAttribute("student", student);
 		request.setAttribute("cnt", cnt);
 		request.getRequestDispatcher("/WEB-INF/views/student/searchList.jsp").forward(request, response);
+	
+	
+	
 	}
 
 	/**

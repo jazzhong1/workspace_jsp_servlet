@@ -1,6 +1,7 @@
 package com.hong.mybatis.model.dao;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -41,6 +42,24 @@ public class StudentDAOImpl implements StudentDAO {
 	public Student selectOne(SqlSession session, String no) {
 		Student student=session.selectOne("mybatis.selectStudent",no);
 		return student;
+	}
+
+	@Override
+	public int deleteStudent(SqlSession session, int no) {
+		int result=session.delete("mybatis.deleteStudent",no);
+		return result;
+	}
+
+	@Override
+	public List<Student> selectList(SqlSession session) {
+		List<Student> list=session.selectList("mybatis.selectList");
+		return list;
+	}
+
+	@Override
+	public List<Student> selectList(SqlSession session, String name) {
+		List<Student> list=session.selectList("mybatis.selectList2",name);
+		return list;
 	}
 
 }

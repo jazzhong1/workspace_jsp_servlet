@@ -1,6 +1,7 @@
 package com.kh.mybatis.model.dao;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -65,8 +66,6 @@ public class MybatisDAOImpl implements MybatisDAO {
 				}
 			}*/
 		return result;
-		
-		
 	}
 
 	@Override
@@ -80,6 +79,30 @@ public class MybatisDAOImpl implements MybatisDAO {
 	public int selectCount(SqlSession session) {
 		int cnt=session.selectOne("mybatis.test7");
 		return cnt;
+	}
+
+	@Override
+	public int delete(SqlSession session, int no) {
+		int result=session.delete("mybatis.test8",no);
+		return result;
+	}
+
+	@Override
+	public List<Student> selectList(SqlSession session) {
+		List<Student> list=session.selectList("mybatis.list1");
+		return list;
+	}
+
+	@Override
+	public List<Student> selectOneList(SqlSession session, String name) {
+		List<Student> list=session.selectList("mybatis.list2",name);
+		return list;
+	}
+
+	@Override
+	public List<Map<String, String>> selectListMap(SqlSession session) {
+		List<Map<String, String>>  list=session.selectList("mybatis.list3");
+		return list;
 	}
 
 
